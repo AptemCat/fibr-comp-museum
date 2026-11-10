@@ -1,15 +1,140 @@
-/* Собственные стили ByteMuseum. Подключаются после Bootstrap. */
+:root {
+  /* Тема сайта */
+  --museum-brand: #2d574b;
+  --museum-brand-rgb: 45, 87, 75;
+  --museum-brand-hover: #234438;
+  --museum-header: #203d35;
+  --museum-accent: #d5b677;
+  --museum-focus: #986414;
+  --museum-surface: #ffffff;
+  --museum-surface-muted: #f0f3ed;
+  --museum-radius: 1rem;
+  --museum-anchor-offset: 10rem;
 
+  /* Общие цвета Bootstrap и собственных блоков */
+  --bs-primary: var(--museum-brand);
+  --bs-primary-rgb: var(--museum-brand-rgb);
+  --bs-body-color: #263c35;
+  --bs-body-bg: #fbfaf6;
+  --bs-secondary-color: #59645e;
+  --bs-border-color: #d5ddd5;
+  --bs-link-color: var(--museum-brand);
+  --bs-link-color-rgb: var(--museum-brand-rgb);
+  --bs-link-hover-color: var(--museum-brand-hover);
+  --bs-link-hover-color-rgb: 35, 68, 56;
+}
+
+/* Базовое поведение и клавиатурная навигация */
 html {
   overscroll-behavior: none;
 }
 
-.museum-brand {
+a:focus-visible,
+.museum-button:focus-visible {
+  outline: 3px solid var(--museum-focus);
+  outline-offset: 4px;
+}
+
+.museum-section {
+  scroll-margin-top: var(--museum-anchor-offset);
+}
+
+/* Шапка и навигация */
+.museum-header {
+  background-color: var(--museum-header);
+}
+
+.museum-header__brand {
   font-weight: 700;
   letter-spacing: 0.02em;
 }
 
-/* Запас под sticky-шапку, включая переносы меню на узком экране. */
-section[id] {
-  scroll-margin-top: 10rem;
+.museum-header a:focus-visible {
+  outline-color: var(--museum-accent);
+}
+
+.museum-nav__link {
+  display: inline-block;
+  padding-block: 0.25rem;
+  color: #ffffff;
+  text-decoration: underline;
+  text-decoration-color: transparent;
+  text-underline-offset: 0.3em;
+}
+
+.museum-nav__link:hover,
+.museum-nav__link:focus-visible {
+  color: var(--museum-accent);
+  text-decoration-color: currentColor;
+}
+
+/* Главный блок и преимущества */
+.museum-hero,
+.museum-footer {
+  background-color: var(--museum-surface-muted);
+}
+
+.museum-hero__eyebrow,
+.exhibit-card__category {
+  font-family: var(--bs-font-monospace);
+}
+
+.museum-hero__eyebrow {
+  color: var(--museum-brand);
+}
+
+.museum-hero__title {
+  letter-spacing: -0.035em;
+}
+
+.museum-hero__image {
+  border: 1px solid var(--bs-border-color);
+}
+
+.museum-benefit {
+  border-top: 3px solid var(--museum-accent);
+}
+
+/* Экспонат */
+.exhibit-card {
+  background-color: var(--museum-surface);
+  border: 1px solid var(--bs-border-color);
+  border-radius: var(--museum-radius);
+}
+
+.exhibit-card--featured {
+  border-color: var(--museum-brand);
+}
+
+.exhibit-card__image {
+  display: block;
+  aspect-ratio: 4 / 3;
+  object-fit: contain;
+  border-bottom: 1px solid var(--bs-border-color);
+}
+
+/* Состояния кнопок через переменные Bootstrap */
+.museum-button {
+  --bs-btn-bg: var(--museum-brand);
+  --bs-btn-border-color: var(--museum-brand);
+  --bs-btn-hover-bg: var(--museum-brand-hover);
+  --bs-btn-hover-border-color: var(--museum-brand-hover);
+  --bs-btn-active-bg: var(--museum-header);
+  --bs-btn-active-border-color: var(--museum-header);
+  --bs-btn-focus-shadow-rgb: var(--museum-brand-rgb);
+  --bs-btn-disabled-bg: var(--museum-brand);
+  --bs-btn-disabled-border-color: var(--museum-brand);
+}
+
+.back-to-top {
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+}
+
+/* Горизонтальное меню занимает меньше места по высоте */
+@media (min-width: 992px) {
+  :root {
+    --museum-anchor-offset: 7rem;
+  }
 }
