@@ -1,6 +1,15 @@
 /* Собственные стили ByteMuseum. Подключаются после Bootstrap. */
 
+html {
+  overscroll-behavior: none;
+}
+
 .museum-brand {
   font-weight: 700;
   letter-spacing: 0.02em;
+}
+
+/* Запас под sticky-шапку, включая переносы меню на узком экране. */
+section[id] {
+  scroll-margin-top: 10rem;
 }
