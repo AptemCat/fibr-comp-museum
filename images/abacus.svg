@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="480" viewBox="0 0 640 480">
+  <rect width="640" height="480" fill="#f2eadd"/>
+  <ellipse cx="320" cy="411" rx="211" ry="17" fill="#ddd0bb"/>
+  <rect x="135" y="64" width="370" height="340" rx="12" fill="#966443"/>
+  <rect x="157" y="86" width="326" height="296" rx="3" fill="#f2eadd"/>
+  <path d="M157 125h326M157 178h326M157 231h326M157 284h326M157 337h326" stroke="#665747" stroke-width="6"/>
+  <g fill="#be8b56" stroke="#966443" stroke-width="2">
+    <rect x="169" y="106" width="25" height="38" rx="12"/><rect x="198" y="106" width="25" height="38" rx="12"/><rect x="227" y="106" width="25" height="38" rx="12"/><rect x="397" y="106" width="25" height="38" rx="12"/><rect x="426" y="106" width="25" height="38" rx="12"/><rect x="455" y="106" width="25" height="38" rx="12"/>
+    <rect x="169" y="159" width="25" height="38" rx="12"/><rect x="198" y="159" width="25" height="38" rx="12"/><rect x="368" y="159" width="25" height="38" rx="12"/><rect x="397" y="159" width="25" height="38" rx="12"/><rect x="426" y="159" width="25" height="38" rx="12"/><rect x="455" y="159" width="25" height="38" rx="12"/>
+    <rect x="169" y="212" width="25" height="38" rx="12"/><rect x="198" y="212" width="25" height="38" rx="12"/><rect x="227" y="212" width="25" height="38" rx="12"/><rect x="256" y="212" width="25" height="38" rx="12"/><rect x="426" y="212" width="25" height="38" rx="12"/><rect x="455" y="212" width="25" height="38" rx="12"/>
+    <rect x="169" y="265" width="25" height="38" rx="12"/><rect x="339" y="265" width="25" height="38" rx="12"/><rect x="368" y="265" width="25" height="38" rx="12"/><rect x="397" y="265" width="25" height="38" rx="12"/><rect x="426" y="265" width="25" height="38" rx="12"/><rect x="455" y="265" width="25" height="38" rx="12"/>
+    <rect x="169" y="318" width="25" height="38" rx="12"/><rect x="198" y="318" width="25" height="38" rx="12"/><rect x="227" y="318" width="25" height="38" rx="12"/><rect x="397" y="318" width="25" height="38" rx="12"/><rect x="426" y="318" width="25" height="38" rx="12"/><rect x="455" y="318" width="25" height="38" rx="12"/>
+  </g>
+</svg>
