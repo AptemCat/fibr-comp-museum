@@ -1,0 +1,6 @@
+/* Собственные стили ByteMuseum. Подключаются после Bootstrap. */
+
+.museum-brand {
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
