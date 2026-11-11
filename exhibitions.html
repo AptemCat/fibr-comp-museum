@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Постоянные и временные экспозиции ByteMuseum: вычислительные устройства, компьютеры, устройства ввода и носители информации.">
+  <title>Экспозиции — ByteMuseum</title>
+  <link rel="icon" type="image/svg+xml" href="images/logo.svg">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/custom.css">
+</head>
+<body id="top" class="d-flex flex-column min-vh-100">
+  <header class="museum-header sticky-top text-white shadow-sm">
+    <nav class="museum-nav navbar navbar-expand-lg py-3" data-bs-theme="dark" aria-label="Основная навигация">
+      <div class="container">
+        <a class="museum-header__brand navbar-brand d-inline-flex align-items-center gap-2 fs-4 mb-0" href="index.html">
+          <img class="museum-brand__icon" src="images/logo.svg" width="36" height="36" alt="">
+          <span>ByteMuseum</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main-menu" aria-controls="main-menu" aria-expanded="false" aria-label="Открыть или закрыть меню">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="main-menu">
+          <ul class="navbar-nav ms-auto gap-lg-3 pt-3 pt-lg-0">
+            <li class="nav-item"><a class="museum-nav__link nav-link" href="index.html">Главная</a></li>
+            <li class="nav-item"><a class="museum-nav__link nav-link" href="exhibitions.html" aria-current="page">Экспозиции</a></li>
+            <li class="nav-item"><a class="museum-nav__link nav-link" href="visitors.html">Посетителям</a></li>
+            <li class="nav-item"><a class="museum-nav__link nav-link" href="tours.html">Запись на экскурсию</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main class="container flex-grow-1 py-5">
+    <nav class="breadcrumbs mb-4" aria-label="Хлебные крошки">
+      <ol class="breadcrumb mb-0">
+          <li class="breadcrumb-item"><a href="index.html">Главная</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Экспозиции</li>
+      </ol>
+    </nav>
+    <h1 class="display-5 fw-bold mb-3">Экспозиции</h1>
+    <p class="lead mb-4">От ручного счёта к цифровой культуре: выберите направление и познакомьтесь с его устройствами.</p>
+    <nav class="mb-5" aria-label="Направления экспозиций">
+      <ul class="d-flex flex-wrap gap-3 list-unstyled mb-0">
+        <li><a href="#abacus">Ручные вычисления</a></li>
+        <li><a href="#personal-computer">Персональные компьютеры</a></li>
+        <li><a href="#floppy-disk">Носители информации</a></li>
+        <li><a href="#pocket-calculator">Калькуляторы</a></li>
+        <li><a href="#computer-mouse">Устройства ввода</a></li>
+        <li><a href="#arithmometer">Механические вычисления</a></li>
+        <li><a href="#handheld-computer">Карманные компьютеры</a></li>
+      </ul>
+    </nav>
+
+    <div class="row g-4">
+      <section id="abacus" class="museum-section col-12 col-md-6 col-lg-4" aria-labelledby="abacus-title">
+        <article class="exhibit-card card h-100 overflow-hidden">
+          <div class="position-relative">
+            <img class="exhibit-card__image card-img-top img-fluid w-100" src="images/abacus.svg" width="640" height="480" alt="Иллюстрация деревянных счётов с рядами костяшек">
+            <div class="position-absolute top-0 start-0 m-3"><span class="museum-badge badge rounded-pill">Постоянная экспозиция</span></div>
+          </div>
+          <div class="card-body d-flex flex-column p-4">
+            <p class="exhibit-card__category small text-body-secondary mb-2">До электронных компьютеров</p>
+            <h2 id="abacus-title" class="card-title h4">До цифровой эпохи</h2>
+            <p class="text-body-secondary">Вычисления начинаются не с процессора. Счётные инструменты позволяют представить число наглядно и выполнять арифметические действия вручную.</p>
+            <h3 class="h5">Счёты</h3>
+            <p class="card-text">Положение костяшек помогает представлять числа и выполнять вычисления без электричества.</p>
+            <a class="museum-button btn btn-primary mt-auto align-self-start" href="exhibit.html?id=abacus" aria-label="Подробнее об экспонате: Счёты">Об экспонате →</a>
+          </div>
+        </article>
+      </section>
+      <section id="personal-computer" class="museum-section col-12 col-md-6 col-lg-4" aria-labelledby="personal-computer-title">
+        <article class="exhibit-card card h-100 overflow-hidden">
+          <div class="position-relative">
+            <img class="exhibit-card__image card-img-top img-fluid w-100" src="images/personal-computer.svg" width="640" height="480" alt="Иллюстрация персонального компьютера с монитором, системным блоком и клавиатурой">
+            <div class="position-absolute top-0 start-0 m-3"><span class="museum-badge badge rounded-pill">Постоянная экспозиция</span></div>
+          </div>
+          <div class="card-body d-flex flex-column p-4">
+            <p class="exhibit-card__category small text-body-secondary mb-2">Эпоха персональных компьютеров</p>
+            <h2 id="personal-computer-title" class="card-title h4">Компьютер становится персональным</h2>
+            <p class="text-body-secondary">Вычислительная техника выходит за пределы специализированных залов. Знакомимся с устройствами для работы, учёбы и творчества за собственным столом.</p>
+            <h3 class="h5">Настольный компьютер</h3>
+            <p class="card-text">Монитор, системный блок и клавиатура — узнаваемый набор для работы с программами и данными.</p>
+            <a class="museum-button btn btn-primary mt-auto align-self-start" href="exhibit.html?id=personal-computer" aria-label="Подробнее об экспонате: Настольный компьютер">Об экспонате →</a>
+          </div>
+        </article>
+      </section>
+      <section id="floppy-disk" class="museum-section col-12 col-md-6 col-lg-4" aria-labelledby="floppy-disk-title">
+        <article class="exhibit-card card h-100 overflow-hidden">
+          <div class="position-relative">
+            <img class="exhibit-card__image card-img-top img-fluid w-100" src="images/floppy-disk.svg" width="640" height="480" alt="Иллюстрация дискеты в квадратном корпусе с металлической шторкой">
+            <div class="position-absolute top-0 start-0 m-3"><span class="museum-badge badge rounded-pill museum-badge--temporary">Временная экспозиция</span></div>
+          </div>
+          <div class="card-body d-flex flex-column p-4">
+            <p class="exhibit-card__category small text-body-secondary mb-2">Эпоха сменных магнитных носителей</p>
+            <h2 id="floppy-disk-title" class="card-title h4">Память вне компьютера</h2>
+            <p class="text-body-secondary">Как перенести файл с одного компьютера на другой? Тематическая подборка посвящена сменным носителям и привычкам хранения информации.</p>
+            <h3 class="h5">Дискета</h3>
+            <p class="card-text">Сменный магнитный носитель для хранения и переноса файлов между компьютерами.</p>
+            <a class="museum-button btn btn-primary mt-auto align-self-start" href="exhibit.html?id=floppy-disk" aria-label="Подробнее об экспонате: Дискета">Об экспонате →</a>
+          </div>
+        </article>
+      </section>
+      <section id="pocket-calculator" class="museum-section col-12 col-md-6 col-lg-4" aria-labelledby="pocket-calculator-title">
+        <article class="exhibit-card card h-100 overflow-hidden">
+          <div class="position-relative">
+            <img class="exhibit-card__image card-img-top img-fluid w-100" src="images/pocket-calculator.svg" width="640" height="480" loading="lazy" alt="Иллюстрация карманного калькулятора с дисплеем и цифровыми клавишами">
+            <div class="position-absolute top-0 start-0 m-3"><span class="museum-badge badge rounded-pill">Постоянная экспозиция</span></div>
+          </div>
+          <div class="card-body d-flex flex-column p-4">
+            <p class="exhibit-card__category small text-body-secondary mb-2">Эпоха электронных калькуляторов</p>
+            <h2 id="pocket-calculator-title" class="card-title h4">Вычисления на ладони</h2>
+            <h3 class="h5">Карманный калькулятор</h3>
+            <p class="card-text">Компактное электронное устройство для арифметических вычислений с клавиатурой и собственным дисплеем.</p>
+            <a class="museum-button btn btn-primary mt-auto align-self-start" href="exhibit.html?id=pocket-calculator" aria-label="Подробнее об экспонате: Карманный калькулятор">Об экспонате →</a>
+          </div>
+        </article>
+      </section>
+      <section id="computer-mouse" class="museum-section col-12 col-md-6 col-lg-4" aria-labelledby="computer-mouse-title">
+        <article class="exhibit-card card h-100 overflow-hidden">
+          <div class="position-relative">
+            <img class="exhibit-card__image card-img-top img-fluid w-100" src="images/computer-mouse.svg" width="640" height="480" loading="lazy" alt="Иллюстрация проводной компьютерной мыши с двумя кнопками и колесом прокрутки">
+            <div class="position-absolute top-0 start-0 m-3"><span class="museum-badge badge rounded-pill">Постоянная экспозиция</span></div>
+          </div>
+          <div class="card-body d-flex flex-column p-4">
+            <p class="exhibit-card__category small text-body-secondary mb-2">Эпоха графических интерфейсов</p>
+            <h2 id="computer-mouse-title" class="card-title h4">Диалог с компьютером</h2>
+            <h3 class="h5">Компьютерная мышь</h3>
+            <p class="card-text">Указательное устройство для управления курсором, выбора объектов и работы с графическим интерфейсом.</p>
+            <a class="museum-button btn btn-primary mt-auto align-self-start" href="exhibit.html?id=computer-mouse" aria-label="Подробнее об экспонате: Компьютерная мышь">Об экспонате →</a>
+          </div>
+        </article>
+      </section>
+      <section id="punched-card" class="museum-section col-12 col-md-6 col-lg-4" aria-labelledby="punched-card-title">
+        <article class="exhibit-card card h-100 overflow-hidden">
+          <div class="position-relative">
+            <img class="exhibit-card__image card-img-top img-fluid w-100" src="images/punched-card.svg" width="640" height="480" loading="lazy" alt="Иллюстрация бумажной перфокарты с рядами прямоугольных отверстий">
+            <div class="position-absolute top-0 start-0 m-3"><span class="museum-badge badge rounded-pill museum-badge--temporary">Временная экспозиция</span></div>
+          </div>
+          <div class="card-body d-flex flex-column p-4">
+            <p class="exhibit-card__category small text-body-secondary mb-2">Эпоха машинной обработки данных</p>
+            <h2 id="punched-card-title" class="card-title h4">Данные на бумаге</h2>
+            <h3 class="h5">Перфокарта</h3>
+            <p class="card-text">Носитель, на котором информация представлена расположением отверстий в плотной бумаге.</p>
+            <a class="museum-button btn btn-primary mt-auto align-self-start" href="exhibit.html?id=punched-card" aria-label="Подробнее об экспонате: Перфокарта">Об экспонате →</a>
+          </div>
+        </article>
+      </section>
+      <section id="arithmometer" class="museum-section col-12 col-md-6 col-lg-4" aria-labelledby="arithmometer-title">
+        <article class="exhibit-card card h-100 overflow-hidden">
+          <div class="position-relative">
+            <img class="exhibit-card__image card-img-top img-fluid w-100" src="images/arithmometer.svg" width="640" height="480" loading="lazy" alt="Иллюстрация механического арифмометра с наборными рычажками, счётными окнами и ручкой">
+            <div class="position-absolute top-0 start-0 m-3"><span class="museum-badge badge rounded-pill">Постоянная экспозиция</span></div>
+          </div>
+          <div class="card-body d-flex flex-column p-4">
+            <p class="exhibit-card__category small text-body-secondary mb-2">Эпоха механических калькуляторов</p>
+            <h2 id="arithmometer-title" class="card-title h4">Числа в движении</h2>
+            <h3 class="h5">Арифмометр</h3>
+            <p class="card-text">Механическая счётная машина, которая выполняет арифметические действия с помощью зубчатых механизмов.</p>
+            <a class="museum-button btn btn-primary mt-auto align-self-start" href="exhibit.html?id=arithmometer" aria-label="Подробнее об экспонате: Арифмометр">Об экспонате →</a>
+          </div>
+        </article>
+      </section>
+      <section id="handheld-computer" class="museum-section col-12 col-md-6 col-lg-4" aria-labelledby="handheld-computer-title">
+        <article class="exhibit-card card h-100 overflow-hidden">
+          <div class="position-relative">
+            <img class="exhibit-card__image card-img-top img-fluid w-100" src="images/handheld-computer.svg" width="640" height="480" loading="lazy" alt="Иллюстрация карманного компьютера с сенсорным экраном, кнопками и стилусом">
+            <div class="position-absolute top-0 start-0 m-3"><span class="museum-badge badge rounded-pill">Постоянная экспозиция</span></div>
+          </div>
+          <div class="card-body d-flex flex-column p-4">
+            <p class="exhibit-card__category small text-body-secondary mb-2">Эпоха персональных цифровых помощников</p>
+            <h2 id="handheld-computer-title" class="card-title h4">Компьютер в кармане</h2>
+            <h3 class="h5">Карманный компьютер</h3>
+            <p class="card-text">Переносной цифровой помощник для заметок, календаря, контактов и небольших приложений.</p>
+            <a class="museum-button btn btn-primary mt-auto align-self-start" href="exhibit.html?id=handheld-computer" aria-label="Подробнее об экспонате: Карманный компьютер">Об экспонате →</a>
+          </div>
+        </article>
+      </section>
+      <section id="optical-disc" class="museum-section col-12 col-md-6 col-lg-4" aria-labelledby="optical-disc-title">
+        <article class="exhibit-card card h-100 overflow-hidden">
+          <div class="position-relative">
+            <img class="exhibit-card__image card-img-top img-fluid w-100" src="images/optical-disc.svg" width="640" height="480" loading="lazy" alt="Иллюстрация оптического диска с центральным отверстием и радужными бликами">
+            <div class="position-absolute top-0 start-0 m-3"><span class="museum-badge badge rounded-pill museum-badge--temporary">Временная экспозиция</span></div>
+          </div>
+          <div class="card-body d-flex flex-column p-4">
+            <p class="exhibit-card__category small text-body-secondary mb-2">Эпоха оптических носителей</p>
+            <h2 id="optical-disc-title" class="card-title h4">Свет хранит информацию</h2>
+            <h3 class="h5">Оптический диск</h3>
+            <p class="card-text">Сменный носитель, данные с которого считываются лазером в оптическом приводе.</p>
+            <a class="museum-button btn btn-primary mt-auto align-self-start" href="exhibit.html?id=optical-disc" aria-label="Подробнее об экспонате: Оптический диск">Об экспонате →</a>
+          </div>
+        </article>
+      </section>
+    </div>
+  </main>
+
+  <footer class="museum-footer border-top pt-5 pb-4">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-12 col-lg-5">
+          <a class="museum-footer__brand d-inline-flex align-items-center gap-2 text-decoration-none mb-3" href="index.html">
+            <img class="museum-brand__icon" src="images/logo.svg" width="40" height="40" alt="">
+            <span class="fs-4 fw-bold">ByteMuseum</span>
+          </a>
+          <p class="text-body-secondary mb-0">Музей компьютеров, вычислительных устройств и цифровых технологий. Знакомимся с историей техники через её устройства и идеи.</p>
+        </div>
+        <div class="col-12 col-sm-6 col-lg-4">
+          <h2 class="h6 mb-3">Контакты</h2>
+          <address class="mb-0">
+            <a class="museum-footer__contact" href="tel:+74959113063">+7 (495) 911-30-63</a>
+          </address>
+          <h2 class="h6 mt-3 mb-2">Время работы</h2>
+          <p class="text-body-secondary mb-0">Вт–Вс, 11:00–20:00</p>
+        </div>
+        <div class="col-12 col-sm-6 col-lg-3">
+          <h2 class="h6 mb-3">Где мы</h2>
+          <address class="mb-0">
+            Москва, Краснохолмская наб., 1/15
+            <span class="d-block text-body-secondary mt-2">Метро «Таганская»</span>
+            <a class="d-inline-block mt-2" href="visitors.html#directions">Адрес на карте →</a>
+          </address>
+        </div>
+      </div>
+      <div class="museum-footer__bottom border-top mt-4 pt-3">
+        <p class="text-body-secondary small mb-0">&copy; 2026 ByteMuseum. Все права защищены.</p>
+      </div>
+    </div>
+  </footer>
+
+  <a class="museum-button back-to-top btn btn-primary position-fixed bottom-0 end-0 m-3 shadow z-3" href="#top" aria-label="Вернуться к началу страницы">↑ Наверх</a>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

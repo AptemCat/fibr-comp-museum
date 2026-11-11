@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="480" viewBox="0 0 640 480">
+  <rect width="640" height="480" fill="#e6ece5"/>
+  <ellipse cx="320" cy="421" rx="150" ry="16" fill="#cdd8cb"/>
+  <rect x="205" y="49" width="230" height="364" rx="20" fill="#3c5149"/>
+  <rect x="220" y="65" width="200" height="95" rx="9" fill="#233a32"/>
+  <rect x="233" y="80" width="174" height="62" rx="4" fill="#cbd8b5"/>
+  <text x="392" y="123" text-anchor="end" font-family="monospace" font-size="34" fill="#344b3c">1024</text>
+  <defs><rect id="key" width="38" height="39" rx="5" fill="#e4dfcd"/></defs>
+  <g>
+    <use href="#key" x="229" y="181"/><use href="#key" x="277" y="181"/><use href="#key" x="325" y="181"/>
+    <use href="#key" x="229" y="231"/><use href="#key" x="277" y="231"/><use href="#key" x="325" y="231"/>
+    <use href="#key" x="229" y="281"/><use href="#key" x="277" y="281"/><use href="#key" x="325" y="281"/>
+    <use href="#key" x="229" y="331"/><use href="#key" x="277" y="331"/><use href="#key" x="325" y="331"/>
+  </g>
+  <g fill="#b99257">
+    <rect x="373" y="181" width="38" height="39" rx="5"/><rect x="373" y="231" width="38" height="39" rx="5"/>
+    <rect x="373" y="281" width="38" height="39" rx="5"/><rect x="373" y="331" width="38" height="39" rx="5"/>
+  </g>
+  <g font-family="monospace" font-size="23" text-anchor="middle" fill="#263c35">
+    <text x="248" y="208">7</text><text x="296" y="208">8</text><text x="344" y="208">9</text><text x="392" y="208">÷</text>
+    <text x="248" y="258">4</text><text x="296" y="258">5</text><text x="344" y="258">6</text><text x="392" y="258">×</text>
+    <text x="248" y="308">1</text><text x="296" y="308">2</text><text x="344" y="308">3</text><text x="392" y="308">−</text>
+    <text x="248" y="358">0</text><text x="296" y="358">.</text><text x="344" y="358">=</text><text x="392" y="358">+</text>
+  </g>
+</svg>

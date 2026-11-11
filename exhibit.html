@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Описание, история и характеристики экспоната ByteMuseum.">
+  <title>Экспонат — ByteMuseum</title>
+  <link rel="icon" type="image/svg+xml" href="images/logo.svg">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/custom.css">
+</head>
+<body id="top" class="d-flex flex-column min-vh-100">
+  <header class="museum-header sticky-top text-white shadow-sm">
+    <nav class="museum-nav navbar navbar-expand-lg py-3" data-bs-theme="dark" aria-label="Основная навигация">
+      <div class="container">
+        <a class="museum-header__brand navbar-brand d-inline-flex align-items-center gap-2 fs-4 mb-0" href="index.html">
+          <img class="museum-brand__icon" src="images/logo.svg" width="36" height="36" alt="">
+          <span>ByteMuseum</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main-menu" aria-controls="main-menu" aria-expanded="false" aria-label="Открыть или закрыть меню">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="main-menu">
+          <ul class="navbar-nav ms-auto gap-lg-3 pt-3 pt-lg-0">
+            <li class="nav-item"><a class="museum-nav__link nav-link" href="index.html">Главная</a></li>
+            <li class="nav-item"><a class="museum-nav__link nav-link" href="exhibitions.html">Экспозиции</a></li>
+            <li class="nav-item"><a class="museum-nav__link nav-link" href="visitors.html">Посетителям</a></li>
+            <li class="nav-item"><a class="museum-nav__link nav-link" href="tours.html">Запись на экскурсию</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main class="container flex-grow-1 py-5">
+    <nav class="breadcrumbs mb-4" aria-label="Хлебные крошки">
+      <ol class="breadcrumb mb-0">
+        <li class="breadcrumb-item"><a href="index.html">Главная</a></li>
+        <li class="breadcrumb-item"><a href="exhibitions.html">Экспозиции</a></li>
+        <li id="exhibit-breadcrumb" class="breadcrumb-item active" aria-current="page">Экспонат</li>
+      </ol>
+    </nav>
+
+    <noscript>
+      <p>Для просмотра описания экспоната включите JavaScript. Список устройств доступен на странице экспозиций.</p>
+    </noscript>
+    <section id="exhibit-message" aria-live="polite">
+      <h1 id="exhibit-message-title" class="display-5 fw-bold mb-3">Экспонаты ByteMuseum</h1>
+      <p id="exhibit-message-text" class="lead">Выберите устройство на странице экспозиций, чтобы узнать его историю и характеристики.</p>
+      <a class="museum-button btn btn-primary" href="exhibitions.html">К экспозициям</a>
+    </section>
+
+    <article id="exhibit-content" hidden>
+      <div class="row g-4 g-lg-5 align-items-start">
+        <div class="col-12 col-lg-6">
+          <figure class="mb-0">
+            <img id="exhibit-image" class="museum-hero__image img-fluid rounded-4 w-100" width="640" height="480" alt="">
+            <figcaption class="small text-body-secondary mt-2">Схематическая иллюстрация типа устройства.</figcaption>
+          </figure>
+        </div>
+        <div class="col-12 col-lg-6">
+          <p class="mb-3"><span id="exhibit-badge" class="museum-badge badge rounded-pill"></span></p>
+          <p id="exhibit-category" class="exhibit-card__category text-body-secondary small mb-2"></p>
+          <h1 id="exhibit-title" class="display-5 fw-bold mb-3"></h1>
+          <p id="exhibit-summary" class="lead"></p>
+          <p id="exhibit-exhibition" class="text-body-secondary"></p>
+          <nav class="d-flex flex-wrap gap-3 mb-4" aria-label="Разделы страницы экспоната">
+            <a href="#description">Описание</a>
+            <a href="#history">История</a>
+            <a href="#specifications">Характеристики</a>
+          </nav>
+          <a id="exhibit-back" class="museum-button btn btn-primary" href="exhibitions.html">К экспозиции</a>
+        </div>
+      </div>
+
+      <div class="row g-4 g-lg-5 mt-4">
+        <div class="col-12 col-lg-7">
+          <section id="description" class="museum-section mb-5" aria-labelledby="description-title">
+            <h2 id="description-title" class="h3 mb-3">Как это устроено</h2>
+            <p id="exhibit-description" class="mb-0"></p>
+          </section>
+          <section id="history" class="museum-section" aria-labelledby="history-title">
+            <h2 id="history-title" class="h3 mb-3">Место в истории</h2>
+            <div id="exhibit-history"></div>
+          </section>
+        </div>
+        <div class="col-12 col-lg-5">
+          <section id="specifications" class="museum-section" aria-labelledby="specifications-title">
+            <h2 id="specifications-title" class="h3 mb-3">Характеристики</h2>
+            <div class="table-responsive" tabindex="0" role="region" aria-label="Таблица характеристик">
+              <table class="exhibit-specs table table-striped align-middle mb-0">
+                <caption>Общие характеристики типа устройства; конкретные модели могут отличаться.</caption>
+                <tbody id="exhibit-specifications"></tbody>
+              </table>
+            </div>
+          </section>
+        </div>
+      </div>
+    </article>
+  </main>
+
+  <footer class="museum-footer border-top pt-5 pb-4">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-12 col-lg-5">
+          <a class="museum-footer__brand d-inline-flex align-items-center gap-2 text-decoration-none mb-3" href="index.html">
+            <img class="museum-brand__icon" src="images/logo.svg" width="40" height="40" alt="">
+            <span class="fs-4 fw-bold">ByteMuseum</span>
+          </a>
+          <p class="text-body-secondary mb-0">Музей компьютеров, вычислительных устройств и цифровых технологий. Знакомимся с историей техники через её устройства и идеи.</p>
+        </div>
+        <div class="col-12 col-sm-6 col-lg-4">
+          <h2 class="h6 mb-3">Контакты</h2>
+          <address class="mb-0">
+            <a class="museum-footer__contact" href="tel:+74959113063">+7 (495) 911-30-63</a>
+          </address>
+          <h2 class="h6 mt-3 mb-2">Время работы</h2>
+          <p class="text-body-secondary mb-0">Вт–Вс, 11:00–20:00</p>
+        </div>
+        <div class="col-12 col-sm-6 col-lg-3">
+          <h2 class="h6 mb-3">Где мы</h2>
+          <address class="mb-0">
+            Москва, Краснохолмская наб., 1/15
+            <span class="d-block text-body-secondary mt-2">Метро «Таганская»</span>
+            <a class="d-inline-block mt-2" href="visitors.html#directions">Адрес на карте →</a>
+          </address>
+        </div>
+      </div>
+      <div class="museum-footer__bottom border-top mt-4 pt-3">
+        <p class="text-body-secondary small mb-0">&copy; 2026 ByteMuseum. Все права защищены.</p>
+      </div>
+    </div>
+  </footer>
+
+  <a class="museum-button back-to-top btn btn-primary position-fixed bottom-0 end-0 m-3 shadow z-3" href="#top" aria-label="Вернуться к началу страницы">↑ Наверх</a>
+
+  <script src="js/exhibits-data.js" defer></script>
+  <script src="js/exhibit.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
