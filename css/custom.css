@@ -59,6 +59,16 @@ a:focus-visible,
   overflow-wrap: anywhere;
 }
 
+.museum-footer__icon {
+  flex-shrink: 0;
+  margin-top: 0.125rem;
+  color: var(--museum-brand);
+}
+
+.museum-footer__link[aria-current="page"] {
+  font-weight: 600;
+}
+
 .museum-footer__bottom {
   /* Оставляем место для фиксированной ссылки «Наверх». */
   padding-right: 7rem;
