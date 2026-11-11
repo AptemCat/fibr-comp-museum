@@ -30,7 +30,9 @@ html {
 }
 
 a:focus-visible,
-.museum-button:focus-visible {
+.museum-button:focus-visible,
+.navbar-toggler:focus-visible,
+.table-responsive:focus-visible {
   outline: 3px solid var(--museum-focus);
   outline-offset: 4px;
 }
@@ -49,7 +51,21 @@ a:focus-visible,
   letter-spacing: 0.02em;
 }
 
-.museum-header a:focus-visible {
+.museum-brand__icon {
+  flex-shrink: 0;
+}
+
+.museum-footer__contact {
+  overflow-wrap: anywhere;
+}
+
+.museum-footer__bottom {
+  /* Оставляем место для фиксированной ссылки «Наверх». */
+  padding-right: 7rem;
+}
+
+.museum-header a:focus-visible,
+.museum-header .navbar-toggler:focus-visible {
   outline-color: var(--museum-accent);
 }
 
@@ -63,9 +79,15 @@ a:focus-visible,
 }
 
 .museum-nav__link:hover,
-.museum-nav__link:focus-visible {
+.museum-nav__link:focus-visible,
+.museum-nav__link[aria-current="page"] {
   color: var(--museum-accent);
   text-decoration-color: currentColor;
+}
+
+.museum-nav .navbar-toggler {
+  min-width: 48px;
+  min-height: 44px;
 }
 
 /* Главный блок и преимущества */
@@ -111,6 +133,28 @@ a:focus-visible,
   aspect-ratio: 4 / 3;
   object-fit: contain;
   border-bottom: 1px solid var(--bs-border-color);
+}
+
+.museum-badge {
+  color: #ffffff;
+  background-color: var(--museum-brand);
+}
+
+.museum-badge--temporary {
+  color: var(--museum-header);
+  background-color: var(--museum-accent);
+}
+
+.exhibit-specs {
+  --bs-table-color: var(--bs-body-color);
+  --bs-table-bg: var(--museum-surface);
+  --bs-table-striped-color: var(--bs-body-color);
+  --bs-table-striped-bg: var(--museum-surface-muted);
+}
+
+.exhibit-specs th {
+  width: 40%;
+  font-weight: 600;
 }
 
 /* Состояния кнопок через переменные Bootstrap */
