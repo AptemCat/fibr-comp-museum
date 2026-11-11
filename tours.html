@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Выберите экскурсию по ByteMuseum, дату и время посещения, число участников и заполните контактные данные.">
+  <title>Запись на экскурсию — ByteMuseum</title>
+  <link rel="icon" type="image/svg+xml" href="images/logo.svg">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/custom.css">
+</head>
+<body id="top" class="d-flex flex-column min-vh-100">
+  <header class="museum-header sticky-top text-white shadow-sm">
+    <nav class="museum-nav navbar navbar-expand-lg py-3" data-bs-theme="dark" aria-label="Основная навигация">
+      <div class="container">
+        <a class="museum-header__brand navbar-brand d-inline-flex align-items-center gap-2 fs-4 mb-0" href="index.html">
+          <img class="museum-brand__icon" src="images/logo.svg" width="36" height="36" alt="">
+          <span>ByteMuseum</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main-menu" aria-controls="main-menu" aria-expanded="false" aria-label="Открыть или закрыть меню">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="main-menu">
+          <ul class="navbar-nav ms-auto gap-lg-3 pt-3 pt-lg-0">
+            <li class="nav-item"><a class="museum-nav__link nav-link" href="index.html">Главная</a></li>
+            <li class="nav-item"><a class="museum-nav__link nav-link" href="exhibitions.html">Экспозиции</a></li>
+            <li class="nav-item"><a class="museum-nav__link nav-link" href="visitors.html">Посетителям</a></li>
+            <li class="nav-item"><a class="museum-nav__link nav-link" href="tours.html" aria-current="page">Запись на экскурсию</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main class="container flex-grow-1 py-5">
+    <nav class="breadcrumbs mb-4" aria-label="Хлебные крошки">
+      <ol class="breadcrumb mb-0">
+        <li class="breadcrumb-item"><a href="index.html">Главная</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Запись на экскурсию</li>
+      </ol>
+    </nav>
+    <h1 class="display-5 fw-bold mb-3">Запись на экскурсию</h1>
+    <p class="lead mb-4">Выберите тему и удобный день, чтобы познакомиться с историей вычислений вместе с экскурсоводом.</p>
+
+    <div class="row g-4 g-lg-5">
+      <div class="col-12 col-lg-8">
+        <noscript><p class="alert alert-warning">Для работы формы включите JavaScript. Записаться также можно по телефону +7 (495) 911-30-63.</p></noscript>
+        <p id="tour-unavailable" class="alert alert-warning" role="alert" hidden>Не удалось загрузить форму. Обновите страницу или свяжитесь с музеем по телефону.</p>
+        <form id="tour-form" class="tour-form" method="post">
+          <div id="tour-errors" class="alert alert-danger" role="alert" hidden>Проверьте отмеченные поля. Подсказки помогут исправить данные.</div>
+          <fieldset id="tour-fields" disabled>
+            <legend class="visually-hidden">Заявка на экскурсию</legend>
+            <fieldset class="mb-5">
+              <legend class="h4 mb-4">Экскурсия и участники</legend>
+              <div class="row g-4">
+                <div class="col-12">
+                  <label class="form-label" for="tour">Экскурсия <span aria-hidden="true">*</span></label>
+                  <select class="form-select" id="tour" name="tour" required aria-describedby="tour-help tour-error">
+                    <option value="">Выберите экскурсию</option>
+                  </select>
+                  <div id="tour-help" class="form-text" aria-live="polite">Выберите тему, чтобы увидеть описание и продолжительность.</div>
+                  <div id="tour-error" class="invalid-feedback">Выберите экскурсию.</div>
+                </div>
+                <div class="col-12 col-md-6">
+                  <label class="form-label" for="visit-date">Дата <span aria-hidden="true">*</span></label>
+                  <input class="form-control" id="visit-date" name="date" type="date" required aria-describedby="date-help date-error">
+                  <div id="date-help" class="form-text">Запись минимум за день. По понедельникам музей закрыт.</div>
+                  <div id="date-error" class="invalid-feedback">Укажите дату экскурсии.</div>
+                </div>
+                <div class="col-12 col-md-6">
+                  <label class="form-label" for="visit-time">Время <span aria-hidden="true">*</span></label>
+                  <select class="form-select" id="visit-time" name="time" required aria-describedby="time-error">
+                    <option value="">Выберите время</option>
+                    <option value="11:00">11:00</option>
+                    <option value="13:00">13:00</option>
+                    <option value="15:00">15:00</option>
+                    <option value="17:00">17:00</option>
+                  </select>
+                  <div id="time-error" class="invalid-feedback">Выберите время экскурсии.</div>
+                </div>
+                <div class="col-12 col-md-6">
+                  <label class="form-label" for="participants">Количество участников <span aria-hidden="true">*</span></label>
+                  <input class="form-control" id="participants" name="participants" type="number" min="1" max="20" step="1" value="1" required aria-describedby="participants-help participants-error">
+                  <div id="participants-help" class="form-text">От 1 до 20 человек в одной заявке.</div>
+                  <div id="participants-error" class="invalid-feedback">Укажите целое число от 1 до 20.</div>
+                </div>
+              </div>
+            </fieldset>
+
+            <fieldset class="mb-4">
+              <legend class="h4 mb-4">Контактные данные</legend>
+              <p class="text-body-secondary small mb-4">Поля со звёздочкой обязательны для заполнения.</p>
+              <div class="row g-4">
+                <div class="col-12">
+                  <label class="form-label" for="visitor-name">Ваше имя <span aria-hidden="true">*</span></label>
+                  <input class="form-control" id="visitor-name" name="name" type="text" autocomplete="name" minlength="2" maxlength="80" required aria-describedby="name-error">
+                  <div id="name-error" class="invalid-feedback">Укажите имя длиной от 2 до 80 символов.</div>
+                </div>
+                <div class="col-12 col-md-6">
+                  <label class="form-label" for="visitor-email">Электронная почта <span aria-hidden="true">*</span></label>
+                  <input class="form-control" id="visitor-email" name="email" type="email" autocomplete="email" maxlength="254" required placeholder="name@example.com" aria-describedby="email-error">
+                  <div id="email-error" class="invalid-feedback">Укажите корректный адрес электронной почты.</div>
+                </div>
+                <div class="col-12 col-md-6">
+                  <label class="form-label" for="visitor-phone">Телефон <span aria-hidden="true">*</span></label>
+                  <div class="input-group has-validation">
+                    <span class="input-group-text" aria-hidden="true">☎</span>
+                    <input class="form-control" id="visitor-phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" maxlength="30" required placeholder="+7 (999) 123-45-67" aria-describedby="phone-error">
+                    <div id="phone-error" class="invalid-feedback">Укажите телефон: от 10 до 15 цифр, допустимы пробелы, скобки и дефисы.</div>
+                  </div>
+                </div>
+                <div class="col-12">
+                  <label class="form-label" for="comment">Комментарий <span class="text-body-secondary">(необязательно)</span></label>
+                  <textarea class="form-control" id="comment" name="comment" rows="4" maxlength="1000" aria-describedby="comment-help" placeholder="Например, возраст участников или интересующие темы"></textarea>
+                  <div id="comment-help" class="form-text">До 1000 символов.</div>
+                </div>
+              </div>
+            </fieldset>
+
+            <div class="form-check mb-4">
+              <input class="form-check-input" id="tour-agreement" name="agreement" type="checkbox" required aria-describedby="agreement-error">
+              <label class="form-check-label" for="tour-agreement">Я ознакомился с <a href="visitors.html#rules" target="_blank" rel="noopener noreferrer">правилами посещения</a> <span aria-hidden="true">*</span></label>
+              <div id="agreement-error" class="invalid-feedback">Подтвердите ознакомление с правилами.</div>
+            </div>
+            <div class="d-flex flex-wrap gap-3">
+              <button id="tour-submit" class="museum-button btn btn-primary" type="submit">Подготовить заявку</button>
+              <button class="btn btn-outline-secondary" type="reset">Очистить</button>
+            </div>
+          </fieldset>
+        </form>
+      </div>
+
+      <aside class="col-12 col-lg-4" aria-labelledby="tour-note-title">
+        <div class="tour-note card rounded-4">
+          <div class="card-body p-4">
+            <h2 id="tour-note-title" class="h4 mb-3">Перед посещением</h2>
+            <ul class="ps-3 mb-4">
+              <li class="mb-2">Выберите одну из трёх тем. Продолжительность — от 45 до 60 минут.</li>
+              <li class="mb-2">Запись открыта со следующего дня, кроме понедельников.</li>
+              <li>Для группы больше 20 человек уточните условия по телефону.</li>
+            </ul>
+            <p class="mb-2"><a href="tel:+74959113063">+7 (495) 911-30-63</a></p>
+            <p class="text-body-secondary mb-3">Вт–Вс, 11:00–20:00</p>
+            <a href="visitors.html#directions">Как добраться до музея →</a>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </main>
+
+  <div id="tour-result" class="modal fade" tabindex="-1" aria-labelledby="tour-result-title" aria-describedby="tour-result-description" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2 id="tour-result-title" class="modal-title fs-4">Заявка подготовлена</h2>
+          <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+        </div>
+        <div class="modal-body">
+          <p id="tour-result-description" class="museum-notice alert alert-success">Данные отправлены в музей.</p>
+          <dl class="tour-summary row mb-0">
+            <dt class="col-sm-4">Экскурсия</dt><dd id="summary-tour" class="col-sm-8"></dd>
+            <dt class="col-sm-4">Длительность</dt><dd id="summary-duration" class="col-sm-8"></dd>
+            <dt class="col-sm-4">Дата</dt><dd id="summary-date" class="col-sm-8"></dd>
+            <dt class="col-sm-4">Время</dt><dd id="summary-time" class="col-sm-8"></dd>
+            <dt class="col-sm-4">Участники</dt><dd id="summary-participants" class="col-sm-8"></dd>
+            <dt class="col-sm-4">Имя</dt><dd id="summary-name" class="col-sm-8"></dd>
+            <dt class="col-sm-4">Почта</dt><dd id="summary-email" class="col-sm-8"></dd>
+            <dt class="col-sm-4">Телефон</dt><dd id="summary-phone" class="col-sm-8"></dd>
+            <dt class="col-sm-4">Комментарий</dt><dd id="summary-comment" class="tour-summary__comment col-sm-8"></dd>
+          </dl>
+        </div>
+        <div class="modal-footer">
+          <button class="museum-button btn btn-primary" type="button" data-bs-dismiss="modal">Вернуться к форме</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="museum-footer border-top pt-5 pb-4">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-12 col-lg-5">
+          <a class="museum-footer__brand d-inline-flex align-items-center gap-2 text-decoration-none mb-3" href="index.html">
+            <img class="museum-brand__icon" src="images/logo.svg" width="40" height="40" alt="">
+            <span class="fs-4 fw-bold">ByteMuseum</span>
+          </a>
+          <p class="text-body-secondary mb-0">Музей компьютеров, вычислительных устройств и цифровых технологий. Знакомимся с историей техники через её устройства и идеи.</p>
+        </div>
+        <div class="col-12 col-sm-6 col-lg-4">
+          <h2 class="h6 mb-3">Контакты</h2>
+          <address class="mb-0">
+            <a class="museum-footer__contact" href="tel:+74959113063">+7 (495) 911-30-63</a>
+          </address>
+          <h2 class="h6 mt-3 mb-2">Время работы</h2>
+          <p class="text-body-secondary mb-0">Вт–Вс, 11:00–20:00</p>
+        </div>
+        <div class="col-12 col-sm-6 col-lg-3">
+          <h2 class="h6 mb-3">Где мы</h2>
+          <address class="mb-0">
+            Москва, Краснохолмская наб., 1/15
+            <span class="d-block text-body-secondary mt-2">Метро «Таганская»</span>
+            <a class="d-inline-block mt-2" href="visitors.html#directions">Адрес на карте →</a>
+          </address>
+        </div>
+      </div>
+      <div class="museum-footer__bottom border-top mt-4 pt-3">
+        <p class="text-body-secondary small mb-0">&copy; 2026 ByteMuseum. Все права защищены.</p>
+      </div>
+    </div>
+  </footer>
+
+  <a class="museum-button back-to-top btn btn-primary position-fixed bottom-0 end-0 m-3 shadow z-3" href="#top" aria-label="Вернуться к началу страницы">↑ Наверх</a>
+
+  <script src="js/tours.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

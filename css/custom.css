@@ -178,6 +178,31 @@ a:focus-visible,
   --bs-accordion-btn-focus-box-shadow: inset 0 0 0 3px var(--museum-focus);
 }
 
+/* Форма записи и предварительный просмотр заявки */
+.tour-note {
+  --bs-card-bg: var(--museum-surface-muted);
+}
+
+.tour-form .form-control:focus,
+.tour-form .form-select:focus,
+.tour-form .form-check-input:focus {
+  border-color: var(--museum-brand);
+  box-shadow: 0 0 0 0.25rem rgba(var(--museum-brand-rgb), 0.2);
+}
+
+.tour-form .form-check-input:checked {
+  background-color: var(--museum-brand);
+  border-color: var(--museum-brand);
+}
+
+.tour-summary dd {
+  overflow-wrap: anywhere;
+}
+
+.tour-summary__comment {
+  white-space: pre-wrap;
+}
+
 /* Состояния кнопок через переменные Bootstrap */
 .museum-button {
   --bs-btn-bg: var(--museum-brand);
