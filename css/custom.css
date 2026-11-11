@@ -176,6 +176,14 @@ a:focus-visible,
   align-items: center;
 }
 
+/* Карта остаётся достаточно высокой для управления на небольшом экране. */
+.location-map {
+  display: block;
+  width: 100%;
+  height: clamp(22rem, 45vw, 32rem);
+  border: 0;
+}
+
 /* Горизонтальное меню занимает меньше места по высоте */
 @media (min-width: 992px) {
   :root {

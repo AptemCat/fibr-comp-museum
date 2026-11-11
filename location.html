@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Адрес ByteMuseum, телефон, время работы и расположение музея на Яндекс Картах: Москва, Краснохолмская набережная, 1/15.">
+  <title>Как нас найти — ByteMuseum</title>
+  <link rel="icon" type="image/svg+xml" href="images/logo.svg">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/custom.css">
+</head>
+<body id="top" class="d-flex flex-column min-vh-100">
+  <header class="museum-header sticky-top text-white shadow-sm">
+    <nav class="museum-nav navbar navbar-expand-lg py-3" data-bs-theme="dark" aria-label="Основная навигация">
+      <div class="container">
+        <a class="museum-header__brand navbar-brand d-inline-flex align-items-center gap-2 fs-4 mb-0" href="index.html">
+          <img class="museum-brand__icon" src="images/logo.svg" width="36" height="36" alt="">
+          <span>ByteMuseum</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main-menu" aria-controls="main-menu" aria-expanded="false" aria-label="Открыть или закрыть меню">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="main-menu">
+          <ul class="navbar-nav ms-auto gap-lg-3 pt-3 pt-lg-0">
+            <li class="nav-item"><a class="museum-nav__link nav-link" href="index.html">Главная</a></li>
+            <li class="nav-item"><a class="museum-nav__link nav-link" href="exhibitions.html">Экспозиции</a></li>
+            <li class="nav-item"><a class="museum-nav__link nav-link" href="location.html" aria-current="page">Как нас найти</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main class="container flex-grow-1 py-5">
+    <nav class="breadcrumbs mb-4" aria-label="Хлебные крошки">
+      <ol class="breadcrumb mb-0">
+        <li class="breadcrumb-item"><a href="index.html">Главная</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Как нас найти</li>
+      </ol>
+    </nav>
+    <h1 class="display-5 fw-bold mb-3">Как нас найти</h1>
+    <p class="lead mb-5">Спланируйте дорогу в ByteMuseum: адрес, телефон и карта — всё в одном месте.</p>
+
+    <div class="row g-4 g-lg-5">
+      <div class="col-12 col-lg-4">
+        <section class="mb-4" aria-labelledby="location-address-title">
+          <h2 id="location-address-title" class="h4 mb-3">Адрес музея</h2>
+          <address class="mb-0">
+            Москва, Краснохолмская набережная, 1/15
+            <span class="d-block text-body-secondary mt-2">Метро «Таганская»</span>
+          </address>
+        </section>
+        <section class="mb-4" aria-labelledby="location-phone-title">
+          <h2 id="location-phone-title" class="h4 mb-3">Позвоните нам</h2>
+          <a class="fs-5" href="tel:+74959113063">+7 (495) 911-30-63</a>
+          <p class="text-body-secondary mt-2 mb-0">Уточните детали посещения перед поездкой.</p>
+        </section>
+        <section class="mb-4" aria-labelledby="location-hours-title">
+          <h2 id="location-hours-title" class="h4 mb-3">Время работы</h2>
+          <p class="mb-0">Вт–Вс, 11:00–20:00</p>
+        </section>
+        <a class="museum-button btn btn-primary" href="https://yandex.ru/maps/?rtext=~55.736332%2C37.651090&amp;rtt=mt" target="_blank" rel="noopener noreferrer">Построить маршрут ↗</a>
+      </div>
+      <section class="col-12 col-lg-8" aria-labelledby="location-map-title">
+        <h2 id="location-map-title" class="h4 mb-3">Музей на карте</h2>
+        <div class="border rounded-4 overflow-hidden">
+          <iframe class="location-map" src="https://yandex.ru/map-widget/v1/?ll=37.651090%2C55.736332&amp;z=17&amp;pt=37.651090%2C55.736332%2Cpm2rdm&amp;lang=ru_RU" width="900" height="480" title="Расположение музея: Москва, Краснохолмская набережная, 1/15" loading="lazy" allowfullscreen></iframe>
+        </div>
+        <p class="small text-body-secondary mt-3 mb-0">Москва, Краснохолмская набережная, 1/15. <a href="https://yandex.ru/maps/?ll=37.651090%2C55.736332&amp;z=17&amp;pt=37.651090%2C55.736332%2Cpm2rdm" target="_blank" rel="noopener noreferrer">Открыть в Яндекс Картах ↗</a></p>
+      </section>
+    </div>
+  </main>
+
+  <footer class="museum-footer border-top pt-5 pb-4">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-12 col-lg-5">
+          <a class="museum-footer__brand d-inline-flex align-items-center gap-2 text-decoration-none mb-3" href="index.html">
+            <img class="museum-brand__icon" src="images/logo.svg" width="40" height="40" alt="">
+            <span class="fs-4 fw-bold">ByteMuseum</span>
+          </a>
+          <p class="text-body-secondary mb-0">Музей компьютеров, вычислительных устройств и цифровых технологий. Знакомимся с историей техники через её устройства и идеи.</p>
+        </div>
+        <div class="col-12 col-sm-6 col-lg-4">
+          <h2 class="h6 mb-3">Контакты</h2>
+          <address class="mb-0">
+            <a class="museum-footer__contact" href="tel:+74959113063">+7 (495) 911-30-63</a>
+          </address>
+          <h2 class="h6 mt-3 mb-2">Время работы</h2>
+          <p class="text-body-secondary mb-0">Вт–Вс, 11:00–20:00</p>
+        </div>
+        <div class="col-12 col-sm-6 col-lg-3">
+          <h2 class="h6 mb-3">Где мы</h2>
+          <address class="mb-0">
+            Москва, Краснохолмская наб., 1/15
+            <span class="d-block text-body-secondary mt-2">Метро «Таганская»</span>
+            <a class="d-inline-block mt-2" href="location.html">Адрес на карте →</a>
+          </address>
+        </div>
+      </div>
+      <div class="museum-footer__bottom border-top mt-4 pt-3">
+        <p class="text-body-secondary small mb-0">&copy; 2026 ByteMuseum</p>
+      </div>
+    </div>
+  </footer>
+
+  <a class="museum-button back-to-top btn btn-primary position-fixed bottom-0 end-0 m-3 shadow z-3" href="#top" aria-label="Вернуться к началу страницы">↑ Наверх</a>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
