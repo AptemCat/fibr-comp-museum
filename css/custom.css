@@ -157,6 +157,27 @@ a:focus-visible,
   font-weight: 600;
 }
 
+/* Информация для посетителей */
+.visitor-ticket {
+  --bs-card-bg: var(--museum-surface);
+}
+
+.museum-notice {
+  --bs-alert-color: var(--bs-body-color);
+  --bs-alert-bg: var(--museum-surface-muted);
+  --bs-alert-border-color: var(--bs-border-color);
+  --bs-alert-link-color: var(--museum-brand);
+}
+
+.museum-faq {
+  --bs-accordion-bg: var(--museum-surface);
+  --bs-accordion-color: var(--bs-body-color);
+  --bs-accordion-btn-color: var(--bs-body-color);
+  --bs-accordion-active-color: var(--museum-brand);
+  --bs-accordion-active-bg: var(--museum-surface-muted);
+  --bs-accordion-btn-focus-box-shadow: inset 0 0 0 3px var(--museum-focus);
+}
+
 /* Состояния кнопок через переменные Bootstrap */
 .museum-button {
   --bs-btn-bg: var(--museum-brand);
@@ -177,7 +198,7 @@ a:focus-visible,
 }
 
 /* Карта остаётся достаточно высокой для управления на небольшом экране. */
-.location-map {
+.visitors-map {
   display: block;
   width: 100%;
   height: clamp(22rem, 45vw, 32rem);

@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Посещение ByteMuseum: стоимость билетов, правила, ответы на вопросы, время работы, телефон, адрес и Яндекс Карты.">
+  <title>Посетителям — ByteMuseum</title>
+  <link rel="icon" type="image/svg+xml" href="images/logo.svg">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/custom.css">
+</head>
+<body id="top" class="d-flex flex-column min-vh-100">
+  <header class="museum-header sticky-top text-white shadow-sm">
+    <nav class="museum-nav navbar navbar-expand-lg py-3" data-bs-theme="dark" aria-label="Основная навигация">
+      <div class="container">
+        <a class="museum-header__brand navbar-brand d-inline-flex align-items-center gap-2 fs-4 mb-0" href="index.html">
+          <img class="museum-brand__icon" src="images/logo.svg" width="36" height="36" alt="">
+          <span>ByteMuseum</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main-menu" aria-controls="main-menu" aria-expanded="false" aria-label="Открыть или закрыть меню">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="main-menu">
+          <ul class="navbar-nav ms-auto gap-lg-3 pt-3 pt-lg-0">
+            <li class="nav-item"><a class="museum-nav__link nav-link" href="index.html">Главная</a></li>
+            <li class="nav-item"><a class="museum-nav__link nav-link" href="exhibitions.html">Экспозиции</a></li>
+            <li class="nav-item"><a class="museum-nav__link nav-link" href="visitors.html" aria-current="page">Посетителям</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main class="container flex-grow-1 py-5">
+    <nav class="breadcrumbs mb-4" aria-label="Хлебные крошки">
+      <ol class="breadcrumb mb-0">
+        <li class="breadcrumb-item"><a href="index.html">Главная</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Посетителям</li>
+      </ol>
+    </nav>
+    <h1 class="display-5 fw-bold mb-3">Посетителям</h1>
+    <p class="lead mb-4">Всё для знакомства с ByteMuseum: билеты, правила посещения и маршрут до музея.</p>
+    <nav class="mb-5" aria-label="Информация для посетителей">
+      <ul class="d-flex flex-wrap gap-3 list-unstyled mb-0">
+        <li><a href="#tickets">Билеты</a></li>
+        <li><a href="#rules">Правила посещения</a></li>
+        <li><a href="#faq">Частые вопросы</a></li>
+        <li><a href="#directions">Адрес и маршрут</a></li>
+      </ul>
+    </nav>
+
+    <section id="tickets" class="museum-section mb-5" aria-labelledby="tickets-title">
+      <h2 id="tickets-title" class="mb-3">Стоимость билетов</h2>
+      <p class="text-body-secondary mb-4">Билет включает самостоятельное посещение экспозиций музея.</p>
+      <div class="row g-4">
+        <div class="col-12 col-md-4">
+          <article class="visitor-ticket card rounded-4 h-100">
+            <div class="card-body p-4">
+              <h3 class="h5 mb-3">Взрослый</h3>
+              <p class="display-6 fw-bold mb-2">400 <span class="fs-5">₽</span></p>
+              <p class="text-body-secondary mb-0">Стандартный билет для самостоятельного знакомства с коллекцией.</p>
+            </div>
+          </article>
+        </div>
+        <div class="col-12 col-md-4">
+          <article class="visitor-ticket card rounded-4 h-100">
+            <div class="card-body p-4">
+              <h3 class="h5 mb-3">Льготный</h3>
+              <p class="display-6 fw-bold mb-2">200 <span class="fs-5">₽</span></p>
+              <p class="text-body-secondary mb-0">Для школьников, студентов и пенсионеров при предъявлении подтверждающего документа.</p>
+            </div>
+          </article>
+        </div>
+        <div class="col-12 col-md-4">
+          <article class="visitor-ticket card rounded-4 h-100">
+            <div class="card-body p-4">
+              <h3 class="h5 mb-3">Дети до 7 лет</h3>
+              <p class="display-6 fw-bold mb-2">0 <span class="fs-5">₽</span></p>
+              <p class="text-body-secondary mb-0">Бесплатно в сопровождении взрослого с билетом.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+      <div class="museum-notice alert alert-info mt-4 mb-0" role="note">
+        <strong>Планируете групповой визит?</strong> Заранее уточните время и условия посещения по телефону <a class="alert-link" href="tel:+74959113063">+7 (495) 911-30-63</a>.
+      </div>
+    </section>
+
+    <div class="row g-4 g-lg-5 mb-5">
+      <section id="rules" class="museum-section col-12 col-lg-5" aria-labelledby="rules-title">
+        <h2 id="rules-title" class="mb-4">Правила посещения</h2>
+        <ol class="ps-3 mb-0">
+          <li class="mb-3"><strong>Берегите экспонаты.</strong> Прикасайтесь к устройствам только при наличии разрешающей маркировки или по приглашению сотрудника.</li>
+          <li class="mb-3"><strong>Фотографируйте без вспышки.</strong> Съёмка для личного использования разрешена без штатива и дополнительного освещения.</li>
+          <li class="mb-3"><strong>Оставьте еду и напитки за пределами экспозиции.</strong> Это помогает сохранить технику и носители информации.</li>
+          <li class="mb-3"><strong>Уважайте других посетителей.</strong> Говорите негромко и не перекрывайте проходы.</li>
+          <li><strong>Сопровождайте детей.</strong> Помогите им соблюдать правила и следуйте рекомендациям сотрудников музея.</li>
+        </ol>
+      </section>
+      <section id="faq" class="museum-section col-12 col-lg-7" aria-labelledby="faq-title">
+        <h2 id="faq-title" class="mb-4">Частые вопросы</h2>
+        <div class="museum-faq accordion" id="visitors-faq">
+          <div class="accordion-item">
+            <h3 class="accordion-header">
+              <button id="faq-booking-button" class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-booking-answer" aria-expanded="false" aria-controls="faq-booking-answer">Нужно ли записываться заранее?</button>
+            </h3>
+            <div id="faq-booking-answer" class="accordion-collapse collapse" aria-labelledby="faq-booking-button" data-bs-parent="#visitors-faq">
+              <div class="accordion-body">Для самостоятельного посещения запись не требуется. Если вы собираетесь прийти группой или хотите экскурсию, заранее свяжитесь с музеем по телефону.</div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h3 class="accordion-header">
+              <button id="faq-tickets-button" class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-tickets-answer" aria-expanded="false" aria-controls="faq-tickets-answer">Где приобрести билет?</button>
+            </h3>
+            <div id="faq-tickets-answer" class="accordion-collapse collapse" aria-labelledby="faq-tickets-button" data-bs-parent="#visitors-faq">
+              <div class="accordion-body">Билеты на самостоятельное посещение можно приобрести в кассе музея. Для льготного билета возьмите с собой документ, подтверждающий право на льготу.</div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h3 class="accordion-header">
+              <button id="faq-children-button" class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-children-answer" aria-expanded="false" aria-controls="faq-children-answer">Можно ли прийти с детьми?</button>
+            </h3>
+            <div id="faq-children-answer" class="accordion-collapse collapse" aria-labelledby="faq-children-button" data-bs-parent="#visitors-faq">
+              <div class="accordion-body">Да. Дети до 7 лет посещают музей бесплатно в сопровождении взрослого с билетом. Для школьников предусмотрен льготный тариф.</div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h3 class="accordion-header">
+              <button id="faq-devices-button" class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-devices-answer" aria-expanded="false" aria-controls="faq-devices-answer">Можно ли включать и трогать устройства?</button>
+            </h3>
+            <div id="faq-devices-answer" class="accordion-collapse collapse" aria-labelledby="faq-devices-button" data-bs-parent="#visitors-faq">
+              <div class="accordion-body">Только с разрешения сотрудника или при наличии специальной маркировки. Многие устройства и носители требуют бережного обращения.</div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h3 class="accordion-header">
+              <button id="faq-photos-button" class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-photos-answer" aria-expanded="false" aria-controls="faq-photos-answer">Разрешена ли фотосъёмка?</button>
+            </h3>
+            <div id="faq-photos-answer" class="accordion-collapse collapse" aria-labelledby="faq-photos-button" data-bs-parent="#visitors-faq">
+              <div class="accordion-body">Для личного использования можно фотографировать без вспышки и штатива. Профессиональную съёмку необходимо предварительно согласовать с музеем.</div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <section id="directions" class="museum-section" aria-labelledby="directions-title">
+      <h2 id="directions-title" class="mb-4">Адрес и маршрут</h2>
+      <div class="row g-4 g-lg-5">
+        <div class="col-12 col-lg-4">
+          <section class="mb-4" aria-labelledby="visitors-address-title">
+            <h3 id="visitors-address-title" class="h4 mb-3">Адрес музея</h3>
+            <address class="mb-0">
+              Москва, Краснохолмская набережная, 1/15
+              <span class="d-block text-body-secondary mt-2">Метро «Таганская»</span>
+            </address>
+          </section>
+          <section class="mb-4" aria-labelledby="visitors-phone-title">
+            <h3 id="visitors-phone-title" class="h4 mb-3">Позвоните нам</h3>
+            <a class="fs-5" href="tel:+74959113063">+7 (495) 911-30-63</a>
+            <p class="text-body-secondary mt-2 mb-0">Уточните детали посещения перед поездкой.</p>
+          </section>
+          <section class="mb-4" aria-labelledby="visitors-hours-title">
+            <h3 id="visitors-hours-title" class="h4 mb-3">Время работы</h3>
+            <p class="mb-0">Вт–Вс, 11:00–20:00</p>
+          </section>
+          <a class="museum-button btn btn-primary" href="https://yandex.ru/maps/?rtext=~55.736332%2C37.651090&amp;rtt=mt" target="_blank" rel="noopener noreferrer">Построить маршрут ↗</a>
+        </div>
+        <section class="col-12 col-lg-8" aria-labelledby="visitors-map-title">
+          <h3 id="visitors-map-title" class="h4 mb-3">Музей на карте</h3>
+          <div class="border rounded-4 overflow-hidden">
+            <iframe class="visitors-map" src="https://yandex.ru/map-widget/v1/?ll=37.651090%2C55.736332&amp;z=17&amp;pt=37.651090%2C55.736332%2Cpm2rdm&amp;lang=ru_RU" width="900" height="480" title="Расположение музея: Москва, Краснохолмская набережная, 1/15" loading="lazy" allowfullscreen></iframe>
+          </div>
+          <p class="small text-body-secondary mt-3 mb-0">Москва, Краснохолмская набережная, 1/15. <a href="https://yandex.ru/maps/?ll=37.651090%2C55.736332&amp;z=17&amp;pt=37.651090%2C55.736332%2Cpm2rdm" target="_blank" rel="noopener noreferrer">Открыть в Яндекс Картах ↗</a></p>
+        </section>
+      </div>
+    </section>
+  </main>
+
+  <footer class="museum-footer border-top pt-5 pb-4">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-12 col-lg-5">
+          <a class="museum-footer__brand d-inline-flex align-items-center gap-2 text-decoration-none mb-3" href="index.html">
+            <img class="museum-brand__icon" src="images/logo.svg" width="40" height="40" alt="">
+            <span class="fs-4 fw-bold">ByteMuseum</span>
+          </a>
+          <p class="text-body-secondary mb-0">Музей компьютеров, вычислительных устройств и цифровых технологий. Знакомимся с историей техники через её устройства и идеи.</p>
+        </div>
+        <div class="col-12 col-sm-6 col-lg-4">
+          <h2 class="h6 mb-3">Контакты</h2>
+          <address class="mb-0">
+            <a class="museum-footer__contact" href="tel:+74959113063">+7 (495) 911-30-63</a>
+          </address>
+          <h2 class="h6 mt-3 mb-2">Время работы</h2>
+          <p class="text-body-secondary mb-0">Вт–Вс, 11:00–20:00</p>
+        </div>
+        <div class="col-12 col-sm-6 col-lg-3">
+          <h2 class="h6 mb-3">Где мы</h2>
+          <address class="mb-0">
+            Москва, Краснохолмская наб., 1/15
+            <span class="d-block text-body-secondary mt-2">Метро «Таганская»</span>
+            <a class="d-inline-block mt-2" href="visitors.html#directions">Адрес на карте →</a>
+          </address>
+        </div>
+      </div>
+      <div class="museum-footer__bottom border-top mt-4 pt-3">
+        <p class="text-body-secondary small mb-0">&copy; 2026 ByteMuseum. Все права защищены.</p>
+      </div>
+    </div>
+  </footer>
+
+  <a class="museum-button back-to-top btn btn-primary position-fixed bottom-0 end-0 m-3 shadow z-3" href="#top" aria-label="Вернуться к началу страницы">↑ Наверх</a>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
