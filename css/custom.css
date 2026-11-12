@@ -69,6 +69,26 @@ a:focus-visible,
   font-weight: 600;
 }
 
+.social-links__link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 44px;
+  height: 44px;
+  color: var(--museum-brand);
+  background-color: var(--museum-surface);
+  border: 1px solid var(--bs-border-color);
+  border-radius: 50%;
+}
+
+.social-links__link:hover,
+.social-links__link:focus-visible {
+  color: #ffffff;
+  background-color: var(--museum-brand);
+  border-color: var(--museum-brand);
+}
+
 .museum-footer__bottom {
   /* Оставляем место для фиксированной ссылки «Наверх». */
   padding-right: 7rem;
