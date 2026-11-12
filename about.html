@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="О ByteMuseum: музей компьютеров, вычислительных устройств и цифровых технологий. Идея коллекции и знакомство с историей вычислений.">
+  <title>О музее — ByteMuseum</title>
+  <link rel="icon" type="image/svg+xml" href="images/logo.svg">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/custom.css">
+</head>
+<body id="top" class="d-flex flex-column min-vh-100">
+  <header class="museum-header sticky-top text-white shadow-sm">
+    <nav class="museum-nav navbar navbar-expand-lg py-3" data-bs-theme="dark" aria-label="Основная навигация">
+      <div class="container">
+        <a class="museum-header__brand navbar-brand d-inline-flex align-items-center gap-2 fs-4 mb-0" href="index.html">
+          <img class="museum-brand__icon" src="images/logo.svg" width="36" height="36" alt="">
+          <span>ByteMuseum</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main-menu" aria-controls="main-menu" aria-expanded="false" aria-label="Открыть или закрыть меню">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="main-menu">
+          <ul class="navbar-nav ms-auto gap-lg-3 pt-3 pt-lg-0">
+            <li class="nav-item"><a class="museum-nav__link nav-link" href="index.html">Главная</a></li>
+            <li class="nav-item"><a class="museum-nav__link nav-link" href="exhibitions.html">Экспозиции</a></li>
+            <li class="nav-item"><a class="museum-nav__link nav-link" href="about.html" aria-current="page">О музее</a></li>
+            <li class="nav-item"><a class="museum-nav__link nav-link" href="visitors.html">Посетителям</a></li>
+            <li class="nav-item"><a class="museum-nav__link nav-link" href="tours.html">Запись на экскурсию</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main class="container flex-grow-1 py-5">
+    <nav class="breadcrumbs mb-4" aria-label="Хлебные крошки">
+      <ol class="breadcrumb mb-0">
+        <li class="breadcrumb-item"><a href="index.html">Главная</a></li>
+        <li class="breadcrumb-item active" aria-current="page">О музее</li>
+      </ol>
+    </nav>
+
+    <section class="row align-items-center g-4 g-lg-5 mb-5" aria-labelledby="about-museum-title">
+      <div class="col-12 col-lg-6">
+        <h1 id="about-museum-title" class="display-5 fw-bold mb-4">О музее</h1>
+        <p class="lead">ByteMuseum — музей компьютеров, вычислительных устройств и цифровых технологий.</p>
+        <p>Мы знакомим с историей техники через задачи, которые она помогала решать: считать, хранить данные, работать с программами и общаться с машиной.</p>
+        <p class="text-body-secondary mb-0">Счёты и арифмометр, персональный и карманный компьютеры, перфокарта и оптический диск показывают разные этапы этой истории. Меняются материалы и механизмы, но за каждым устройством остаётся человеческая идея.</p>
+      </div>
+      <div class="col-12 col-lg-6">
+        <figure class="mb-0">
+          <img class="museum-hero__image img-fluid rounded-4 w-100" src="images/museum-display.svg" width="640" height="480" alt="Иллюстрация музейных витрин со счётами, карманным компьютером и оптическим диском">
+          <figcaption class="small text-body-secondary mt-2">Разные устройства — общая история работы с информацией.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="mb-5" aria-labelledby="collection-title">
+      <h2 id="collection-title" class="mb-4">Что объединяет коллекцию</h2>
+      <div class="row g-4">
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="museum-benefit d-flex flex-column h-100 pt-3">
+            <h3 class="h5">Вычислять</h3>
+            <p class="text-body-secondary">От перемещения костяшек до вращения шестерёнок и электронных схем. Счёты, арифмометр и калькулятор помогают понять, как люди упрощали работу с числами.</p>
+            <a class="mt-auto align-self-start" href="exhibitions.html#arithmometer">Устройства для вычислений →</a>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="museum-benefit d-flex flex-column h-100 pt-3">
+            <h3 class="h5">Взаимодействовать</h3>
+            <p class="text-body-secondary">Компьютер становится персональным, а затем помещается в кармане. Вместе с ним меняются способы управления: клавиатура, мышь, сенсорный экран и стилус.</p>
+            <a class="mt-auto align-self-start" href="exhibitions.html#handheld-computer">Персональная техника →</a>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="museum-benefit d-flex flex-column h-100 pt-3">
+            <h3 class="h5">Сохранять</h3>
+            <p class="text-body-secondary">Отверстия в бумаге, магнитная запись и отражение лазерного света — разные способы представить информацию, сохранить её и передать другому устройству.</p>
+            <a class="mt-auto align-self-start" href="exhibitions.html#floppy-disk">Носители информации →</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="row g-4" aria-labelledby="explore-title">
+      <div class="col-12 col-lg-9">
+        <h2 id="explore-title" class="mb-3">Выберите свой маршрут</h2>
+        <p class="text-body-secondary mb-4">Начните с экспоната, который вызывает любопытство, или выберите экскурсию по интересующей теме. Подробные описания помогут разобраться в устройстве техники, а истории носителей и компьютеров — увидеть связь между разными эпохами.</p>
+        <div class="d-flex flex-wrap gap-3 mb-3">
+          <a class="museum-button btn btn-primary" href="exhibitions.html">Посмотреть экспозиции</a>
+          <a class="btn btn-outline-secondary" href="tours.html">Запись на экскурсию</a>
+        </div>
+        <a href="visitors.html">Билеты, правила посещения и адрес →</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="museum-footer border-top pt-5 pb-4">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-12 col-lg-5">
+          <a class="museum-footer__brand d-inline-flex align-items-center gap-2 text-decoration-none mb-3" href="index.html">
+            <img class="museum-brand__icon" src="images/logo.svg" width="40" height="40" alt="">
+            <span class="fs-4 fw-bold">ByteMuseum</span>
+          </a>
+          <p class="text-body-secondary mb-0">Музей компьютеров, вычислительных устройств и цифровых технологий. Знакомимся с историей техники через её устройства и идеи.</p>
+        </div>
+        <div class="col-12 col-sm-5 col-lg-3 d-flex justify-content-lg-center">
+          <nav aria-label="Навигация в подвале">
+            <ul class="d-flex flex-column gap-3 list-unstyled mb-0">
+              <li><a class="museum-footer__link" href="index.html">Главная</a></li>
+              <li><a class="museum-footer__link" href="exhibitions.html">Экспозиции</a></li>
+              <li><a class="museum-footer__link" href="about.html" aria-current="page">О музее</a></li>
+              <li><a class="museum-footer__link" href="visitors.html">Посетителям</a></li>
+              <li><a class="museum-footer__link" href="tours.html">Запись на экскурсию</a></li>
+            </ul>
+          </nav>
+        </div>
+        <div class="col-12 col-sm-7 col-lg-4">
+          <ul class="d-flex flex-column gap-3 list-unstyled mb-0">
+            <li class="d-flex align-items-start gap-3">
+              <svg class="museum-footer__icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><use href="images/icons.svg#phone"></use></svg>
+              <div><span class="visually-hidden">Телефон: </span><a class="museum-footer__contact" href="tel:+74959113063">+7 (495) 911-30-63</a></div>
+            </li>
+            <li class="d-flex align-items-start gap-3">
+              <svg class="museum-footer__icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><use href="images/icons.svg#mail"></use></svg>
+              <div><span class="visually-hidden">Электронная почта: </span><a class="museum-footer__contact" href="mailto:redhills@vzmoscow.ru">redhills@vzmoscow.ru</a></div>
+            </li>
+            <li class="d-flex align-items-start gap-3">
+              <svg class="museum-footer__icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><use href="images/icons.svg#clock"></use></svg>
+              <div><span class="visually-hidden">Время работы: </span><span>Вт–Вс, 11:00–20:00</span></div>
+            </li>
+            <li class="d-flex align-items-start gap-3">
+              <svg class="museum-footer__icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><use href="images/icons.svg#pin"></use></svg>
+              <address class="mb-0">
+                <span class="visually-hidden">Адрес: </span><a href="visitors.html#directions">Москва, Краснохолмская наб., 1/15</a>
+                <span class="d-block text-body-secondary mt-2">Метро «Таганская»</span>
+              </address>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="museum-footer__bottom border-top mt-4 pt-3">
+        <p class="text-body-secondary small mb-0">&copy; 2026 ByteMuseum. Все права защищены.</p>
+      </div>
+    </div>
+  </footer>
+
+  <a class="museum-button back-to-top btn btn-primary position-fixed bottom-0 end-0 m-3 shadow z-3" href="#top" aria-label="Вернуться к началу страницы">Наверх</a>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
