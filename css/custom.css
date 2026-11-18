@@ -193,6 +193,41 @@ a:focus-visible,
   background-color: var(--museum-surface);
 }
 
+.exhibit-comparison {
+  background-color: var(--museum-surface);
+}
+
+.comparison-table {
+  table-layout: fixed;
+  min-width: 42rem;
+}
+
+.comparison-table thead th {
+  width: auto;
+}
+
+.comparison-table--three {
+  min-width: 54rem;
+}
+
+.comparison-table th:first-child {
+  width: 10rem;
+}
+
+.comparison-table th,
+.comparison-table td {
+  overflow-wrap: anywhere;
+}
+
+#comparison-result-title {
+  scroll-margin-top: var(--museum-anchor-offset);
+}
+
+.comparison-choice .form-check-input:checked {
+  background-color: var(--museum-brand);
+  border-color: var(--museum-brand);
+}
+
 .exhibit-card {
   background-color: var(--museum-surface);
   border: 1px solid var(--bs-border-color);
@@ -262,6 +297,7 @@ a:focus-visible,
 .tour-form .form-select:focus,
 .exhibition-filters .form-control:focus,
 .exhibition-filters .form-select:focus,
+.comparison-choice .form-check-input:focus,
 .tour-form .form-check-input:focus {
   border-color: var(--museum-brand);
   box-shadow: 0 0 0 0.25rem rgba(var(--museum-brand-rgb), 0.2);

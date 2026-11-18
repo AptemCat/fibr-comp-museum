@@ -114,6 +114,28 @@
       </div>
     </form>
 
+    <section id="comparison" class="museum-section exhibit-comparison border rounded-4 p-4 mb-4" aria-labelledby="comparison-title" hidden>
+      <h2 id="comparison-title" class="h3 mb-3">Сравнение экспонатов</h2>
+      <p id="comparison-help" class="text-body-secondary">Отметьте два или три устройства в карточках ниже. Выбор сохраняется при поиске и фильтрации.</p>
+      <p id="comparison-status" role="status" aria-live="polite" aria-atomic="true"></p>
+      <ul id="comparison-selected" class="d-flex flex-wrap gap-2 list-unstyled mb-3" aria-label="Выбранные экспонаты"></ul>
+      <div class="d-flex flex-wrap gap-3">
+        <button id="comparison-show" class="museum-button btn btn-primary" type="button" disabled>Сравнить</button>
+        <button id="comparison-clear" class="btn btn-outline-secondary" type="button" disabled>Очистить выбор</button>
+      </div>
+      <div id="comparison-result" class="mt-4" hidden>
+        <h3 id="comparison-result-title" class="h4 mb-3" tabindex="-1">Характеристики рядом</h3>
+        <p id="comparison-scroll-help" class="small text-body-secondary">На небольшом экране таблицу можно прокручивать по горизонтали.</p>
+        <div class="table-responsive" tabindex="0" role="region" aria-label="Сравнение характеристик экспонатов" aria-describedby="comparison-scroll-help">
+          <table class="comparison-table exhibit-specs table table-striped table-bordered align-middle mb-0">
+            <caption>Общие характеристики типов устройств; возможности конкретных моделей могут отличаться.</caption>
+            <thead id="comparison-head"></thead>
+            <tbody id="comparison-body"></tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
     <div id="exhibition-empty" class="exhibition-empty border rounded-4 p-4 mb-4" hidden>
       <h2 class="h4 mb-3">Экспонаты не найдены</h2>
       <p class="text-body-secondary">Попробуйте другое название или измените выбранные фильтры.</p>
@@ -327,6 +349,7 @@
 
   <script src="js/exhibits-data.js" defer></script>
   <script src="js/exhibitions.js" defer></script>
+  <script src="js/comparison.js" defer></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
