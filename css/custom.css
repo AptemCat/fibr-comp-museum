@@ -148,6 +148,14 @@ a:focus-visible,
 }
 
 /* Экспонат */
+.exhibition-filters {
+  background-color: var(--museum-surface-muted);
+}
+
+.exhibition-empty {
+  background-color: var(--museum-surface);
+}
+
 .exhibit-card {
   background-color: var(--museum-surface);
   border: 1px solid var(--bs-border-color);
@@ -215,6 +223,8 @@ a:focus-visible,
 
 .tour-form .form-control:focus,
 .tour-form .form-select:focus,
+.exhibition-filters .form-control:focus,
+.exhibition-filters .form-select:focus,
 .tour-form .form-check-input:focus {
   border-color: var(--museum-brand);
   box-shadow: 0 0 0 0.25rem rgba(var(--museum-brand-rgb), 0.2);

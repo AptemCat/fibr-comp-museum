@@ -42,7 +42,7 @@
     </nav>
     <h1 class="display-5 fw-bold mb-3">Экспозиции</h1>
     <p class="lead mb-4">От ручного счёта к цифровой культуре: выберите направление и познакомьтесь с его устройствами.</p>
-    <nav class="mb-5" aria-label="Направления экспозиций">
+    <nav id="exhibition-directions" class="mb-5" aria-label="Направления экспозиций">
       <ul class="d-flex flex-wrap gap-3 list-unstyled mb-0">
         <li><a href="#abacus">Ручные вычисления</a></li>
         <li><a href="#personal-computer">Персональные компьютеры</a></li>
@@ -54,7 +54,40 @@
       </ul>
     </nav>
 
-    <div class="row g-4">
+    <form id="exhibition-filters" class="exhibition-filters border rounded-4 p-4 mb-4" role="search" aria-label="Поиск и фильтры экспонатов" hidden>
+      <div class="row g-3">
+        <div class="col-12 col-lg-5">
+          <label class="form-label" for="exhibit-search">Поиск по названию</label>
+          <input id="exhibit-search" class="form-control" name="search" type="search" maxlength="100" placeholder="Например, перфокарта" autocomplete="off" aria-controls="exhibitions-list">
+        </div>
+        <div class="col-12 col-md-6 col-lg-4">
+          <label class="form-label" for="exhibit-category">Направление</label>
+          <select id="exhibit-category" class="form-select" name="category" aria-controls="exhibitions-list">
+            <option value="">Все направления</option>
+          </select>
+        </div>
+        <div class="col-12 col-md-6 col-lg-3">
+          <label class="form-label" for="exhibition-type">Тип выставки</label>
+          <select id="exhibition-type" class="form-select" name="type" aria-controls="exhibitions-list">
+            <option value="">Все выставки</option>
+            <option value="permanent">Постоянные</option>
+            <option value="temporary">Временные</option>
+          </select>
+        </div>
+      </div>
+      <div class="d-flex flex-wrap align-items-center gap-3 mt-3">
+        <button class="btn btn-outline-secondary" type="reset">Сбросить фильтры</button>
+        <p id="exhibition-count" class="text-body-secondary mb-0" role="status" aria-live="polite" aria-atomic="true"></p>
+      </div>
+    </form>
+
+    <div id="exhibition-empty" class="exhibition-empty border rounded-4 p-4 mb-4" hidden>
+      <h2 class="h4 mb-3">Экспонаты не найдены</h2>
+      <p class="text-body-secondary">Попробуйте другое название или измените выбранные фильтры.</p>
+      <button class="museum-button btn btn-primary" type="reset" form="exhibition-filters">Сбросить фильтры</button>
+    </div>
+
+    <div id="exhibitions-list" class="row g-4">
       <section id="abacus" class="museum-section col-12 col-md-6 col-lg-4" aria-labelledby="abacus-title">
         <article class="exhibit-card card h-100 overflow-hidden">
           <div class="position-relative">
@@ -259,6 +292,8 @@
 
   <a class="museum-button back-to-top btn btn-primary position-fixed bottom-0 end-0 m-3 shadow z-3" href="#top" aria-label="Вернуться к началу страницы">Наверх</a>
 
+  <script src="js/exhibits-data.js" defer></script>
+  <script src="js/exhibitions.js" defer></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
