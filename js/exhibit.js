@@ -62,6 +62,16 @@
   });
   document.getElementById('exhibit-specifications').replaceChildren(...rows);
 
+  const tours = window.toursData;
+  if (tours && Object.hasOwn(tours, exhibit.tourId)) {
+    const tour = tours[exhibit.tourId];
+    setText('exhibit-tour-title', tour.name);
+    setText('exhibit-tour-description', tour.description);
+    setText('exhibit-tour-duration', `Продолжительность — ${tour.duration} мин.`);
+    document.getElementById('exhibit-tour-link').href = `tours.html?tour=${encodeURIComponent(exhibit.tourId)}`;
+    document.getElementById('exhibit-tour').hidden = false;
+  }
+
   message.hidden = true;
   content.hidden = false;
 

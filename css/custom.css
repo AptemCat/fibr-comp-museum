@@ -147,7 +147,44 @@ a:focus-visible,
   border-top: 3px solid var(--museum-accent);
 }
 
-/* Экспонат */
+/* Хронология: вертикальная на телефоне, горизонтальная на широком экране. */
+.museum-timeline {
+  background-color: var(--museum-surface-muted);
+}
+
+.museum-timeline__list {
+  margin: 0 0 0 0.75rem;
+  padding-top: 0.75rem;
+}
+
+.museum-timeline__step {
+  position: relative;
+  padding: 0 0 2rem 2rem;
+  border-left: 2px solid var(--museum-brand);
+}
+
+.museum-timeline__step:last-child {
+  padding-bottom: 0;
+  border-color: transparent;
+}
+
+.museum-timeline__number {
+  position: absolute;
+  top: 0;
+  left: -0.85rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.6rem;
+  height: 1.6rem;
+  border-radius: 50%;
+  color: #ffffff;
+  background-color: var(--museum-brand);
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+/* Экспозиции и экспонаты */
 .exhibition-filters {
   background-color: var(--museum-surface-muted);
 }
@@ -274,5 +311,20 @@ a:focus-visible,
 @media (min-width: 992px) {
   :root {
     --museum-anchor-offset: 7rem;
+  }
+
+  .museum-timeline__list {
+    margin-left: 0;
+  }
+
+  .museum-timeline__step {
+    padding: 2rem 1rem 0 0;
+    border-left: 0;
+    border-top: 2px solid var(--museum-brand);
+  }
+
+  .museum-timeline__number {
+    top: -0.85rem;
+    left: 0;
   }
 }

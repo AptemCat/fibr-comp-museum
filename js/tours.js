@@ -5,28 +5,12 @@
   const fields = document.getElementById('tour-fields');
   const errors = document.getElementById('tour-errors');
 
-  if (!window.bootstrap?.Modal) {
+  if (!window.bootstrap?.Modal || !window.toursData) {
     document.getElementById('tour-unavailable').hidden = false;
     return;
   }
 
-  const tours = {
-    overview: {
-      name: 'От счётов до компьютера',
-      duration: 60,
-      description: 'Обзорная экскурсия: ручные вычисления, механические машины и персональные компьютеры.'
-    },
-    pocket: {
-      name: 'Вычисления на ладони',
-      duration: 45,
-      description: 'История карманной техники: от электронного калькулятора до цифрового помощника.'
-    },
-    storage: {
-      name: 'Как сохранить информацию',
-      duration: 45,
-      description: 'Путь от перфокарты к магнитным и оптическим носителям информации.'
-    }
-  };
+  const tours = window.toursData;
 
   const tour = form.elements.namedItem('tour');
   const date = form.elements.namedItem('date');
@@ -40,6 +24,10 @@
   for (const [id, entry] of Object.entries(tours)) {
     tour.add(new Option(`${entry.name} · ${entry.duration} мин`, id));
   }
+
+  // Принимаем только известные темы; остальные параметры не влияют на форму.
+  const requestedTour = new URLSearchParams(window.location.search).get('tour');
+  if (requestedTour && Object.hasOwn(tours, requestedTour)) tour.value = requestedTour;
 
   // Дата записи определяется по времени музея, а не по часовому поясу браузера.
   const todayParts = new Intl.DateTimeFormat('en-CA', {
@@ -144,7 +132,7 @@
       control.setCustomValidity('');
       control.removeAttribute('aria-invalid');
     }
-    queueMicrotask(updateTour);
+    setTimeout(updateTour, 0);
   });
 
   // До запуска JavaScript поля выключены, чтобы форма не отправила контакты случайным GET-запросом.

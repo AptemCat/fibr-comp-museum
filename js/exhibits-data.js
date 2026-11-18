@@ -2,6 +2,7 @@
 window.exhibitsData = {
   "abacus": {
     "id": "abacus",
+    "tourId": "overview",
     "name": "Счёты",
     "category": "Ручные вычисления",
     "exhibition": "До цифровой эпохи",
@@ -40,6 +41,7 @@ window.exhibitsData = {
   },
   "personal-computer": {
     "id": "personal-computer",
+    "tourId": "overview",
     "name": "Настольный компьютер",
     "category": "Персональные компьютеры",
     "exhibition": "Компьютер становится персональным",
@@ -82,6 +84,7 @@ window.exhibitsData = {
   },
   "floppy-disk": {
     "id": "floppy-disk",
+    "tourId": "storage",
     "name": "Дискета",
     "category": "Носители информации",
     "exhibition": "Память вне компьютера",
@@ -124,6 +127,7 @@ window.exhibitsData = {
   },
   "pocket-calculator": {
     "id": "pocket-calculator",
+    "tourId": "pocket",
     "name": "Карманный калькулятор",
     "category": "Калькуляторы",
     "exhibition": "Вычисления на ладони",
@@ -166,6 +170,7 @@ window.exhibitsData = {
   },
   "computer-mouse": {
     "id": "computer-mouse",
+    "tourId": "overview",
     "name": "Компьютерная мышь",
     "category": "Устройства ввода",
     "exhibition": "Диалог с компьютером",
@@ -208,6 +213,7 @@ window.exhibitsData = {
   },
   "punched-card": {
     "id": "punched-card",
+    "tourId": "storage",
     "name": "Перфокарта",
     "category": "Носители информации",
     "exhibition": "Данные на бумаге",
@@ -250,6 +256,7 @@ window.exhibitsData = {
   },
   "arithmometer": {
     "id": "arithmometer",
+    "tourId": "overview",
     "name": "Арифмометр",
     "category": "Механические вычисления",
     "exhibition": "Числа в движении",
@@ -292,6 +299,7 @@ window.exhibitsData = {
   },
   "handheld-computer": {
     "id": "handheld-computer",
+    "tourId": "pocket",
     "name": "Карманный компьютер",
     "category": "Карманные компьютеры",
     "exhibition": "Компьютер в кармане",
@@ -334,6 +342,7 @@ window.exhibitsData = {
   },
   "optical-disc": {
     "id": "optical-disc",
+    "tourId": "storage",
     "name": "Оптический диск",
     "category": "Носители информации",
     "exhibition": "Свет хранит информацию",
