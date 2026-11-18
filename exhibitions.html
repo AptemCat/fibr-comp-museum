@@ -1,17 +1,18 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="ru" data-bs-theme="light">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Постоянные и временные экспозиции ByteMuseum: вычислительные устройства, компьютеры, устройства ввода и носители информации.">
   <title>Экспозиции — ByteMuseum</title>
   <link rel="icon" type="image/svg+xml" href="images/logo.svg">
+  <script src="js/theme.js"></script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="css/custom.css">
 </head>
 <body id="top" class="d-flex flex-column min-vh-100">
   <header class="museum-header sticky-top text-white shadow-sm">
-    <nav class="museum-nav navbar navbar-expand-lg py-3" data-bs-theme="dark" aria-label="Основная навигация">
+    <nav class="museum-nav navbar navbar-expand-xl py-3" data-bs-theme="dark" aria-label="Основная навигация">
       <div class="container">
         <a class="museum-header__brand navbar-brand d-inline-flex align-items-center gap-2 fs-4 mb-0" href="index.html">
           <img class="museum-brand__icon" src="images/logo.svg" width="36" height="36" alt="">
@@ -21,13 +22,16 @@
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="main-menu">
-          <ul class="navbar-nav ms-auto gap-lg-3 pt-3 pt-lg-0">
+          <ul class="navbar-nav ms-auto gap-xl-3 pt-3 pt-xl-0">
             <li class="nav-item"><a class="museum-nav__link nav-link" href="index.html">Главная</a></li>
             <li class="nav-item"><a class="museum-nav__link nav-link" href="exhibitions.html" aria-current="page">Экспозиции</a></li>
             <li class="nav-item"><a class="museum-nav__link nav-link" href="about.html">О музее</a></li>
             <li class="nav-item"><a class="museum-nav__link nav-link" href="visitors.html">Посетителям</a></li>
             <li class="nav-item"><a class="museum-nav__link nav-link" href="tours.html">Запись на экскурсию</a></li>
           </ul>
+          <button id="theme-toggle" class="theme-toggle btn align-items-center justify-content-center ms-xl-3 mt-3 mt-xl-0" type="button" aria-label="Тема: системная. Переключить на тёмную" title="Тема: системная. Переключить на тёмную" hidden>
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><use id="theme-icon" href="images/icons.svg#theme-system"></use></svg>
+          </button>
         </div>
       </div>
     </nav>
@@ -42,7 +46,40 @@
     </nav>
     <h1 class="display-5 fw-bold mb-3">Экспозиции</h1>
     <p class="lead mb-4">От ручного счёта к цифровой культуре: выберите направление и познакомьтесь с его устройствами.</p>
-    <nav class="mb-5" aria-label="Направления экспозиций">
+    <section class="museum-timeline border rounded-4 p-4 mb-5" aria-labelledby="timeline-title" data-reveal>
+      <h2 id="timeline-title" class="h3 mb-3">Хронология вычислительной техники</h2>
+      <p class="text-body-secondary mb-4">Как менялись способы вычислений: от движения костяшек до программ в кармане. Эти этапы дополняли друг друга, а многие устройства продолжали использоваться одновременно.</p>
+      <ol class="museum-timeline__list row row-cols-1 row-cols-lg-4 list-unstyled mb-0">
+        <li class="museum-timeline__step col">
+          <span class="museum-timeline__number" aria-hidden="true">1</span>
+          <h3 class="h5">Ручные вычисления</h3>
+          <p class="small text-body-secondary">Человек выполняет действия, а счётный инструмент помогает представить числа и удержать результат.</p>
+          <a href="exhibit.html?id=abacus">Счёты</a>
+        </li>
+        <li class="museum-timeline__step col">
+          <span class="museum-timeline__number" aria-hidden="true">2</span>
+          <h3 class="h5">Механические машины</h3>
+          <p class="small text-body-secondary">Зубчатые механизмы берут на себя арифметические действия и перенос между разрядами.</p>
+          <a href="exhibit.html?id=arithmometer">Арифмометр</a>
+        </li>
+        <li class="museum-timeline__step col">
+          <span class="museum-timeline__number" aria-hidden="true">3</span>
+          <h3 class="h5">Электронные калькуляторы</h3>
+          <p class="small text-body-secondary">Электронная схема считает по нажатию клавиш, а результат появляется на встроенном дисплее.</p>
+          <a href="exhibit.html?id=pocket-calculator">Карманный калькулятор</a>
+        </li>
+        <li class="museum-timeline__step col">
+          <span class="museum-timeline__number" aria-hidden="true">4</span>
+          <h3 class="h5">Персональные и карманные компьютеры</h3>
+          <p class="small text-body-secondary">Программы расширяют круг задач: от работы за столом до заметок и календаря в дороге.</p>
+          <ul class="list-unstyled d-flex flex-column gap-2 mb-0">
+            <li><a href="exhibit.html?id=personal-computer">Настольный компьютер</a></li>
+            <li><a href="exhibit.html?id=handheld-computer">Карманный компьютер</a></li>
+          </ul>
+        </li>
+      </ol>
+    </section>
+    <nav id="exhibition-directions" class="mb-5" aria-label="Направления экспозиций">
       <ul class="d-flex flex-wrap gap-3 list-unstyled mb-0">
         <li><a href="#abacus">Ручные вычисления</a></li>
         <li><a href="#personal-computer">Персональные компьютеры</a></li>
@@ -54,7 +91,62 @@
       </ul>
     </nav>
 
-    <div class="row g-4">
+    <form id="exhibition-filters" class="exhibition-filters border rounded-4 p-4 mb-4" role="search" aria-label="Поиск и фильтры экспонатов" hidden>
+      <div class="row g-3">
+        <div class="col-12 col-lg-5">
+          <label class="form-label" for="exhibit-search">Поиск по названию</label>
+          <input id="exhibit-search" class="form-control" name="search" type="search" maxlength="100" placeholder="Например, перфокарта" autocomplete="off" aria-controls="exhibitions-list">
+        </div>
+        <div class="col-12 col-md-6 col-lg-4">
+          <label class="form-label" for="exhibit-category">Направление</label>
+          <select id="exhibit-category" class="form-select" name="category" aria-controls="exhibitions-list">
+            <option value="">Все направления</option>
+          </select>
+        </div>
+        <div class="col-12 col-md-6 col-lg-3">
+          <label class="form-label" for="exhibition-type">Тип выставки</label>
+          <select id="exhibition-type" class="form-select" name="type" aria-controls="exhibitions-list">
+            <option value="">Все выставки</option>
+            <option value="permanent">Постоянные</option>
+            <option value="temporary">Временные</option>
+          </select>
+        </div>
+      </div>
+      <div class="d-flex flex-wrap align-items-center gap-3 mt-3">
+        <button class="btn btn-outline-secondary" type="reset">Сбросить фильтры</button>
+        <p id="exhibition-count" class="text-body-secondary mb-0" role="status" aria-live="polite" aria-atomic="true"></p>
+      </div>
+    </form>
+
+    <section id="comparison" class="museum-section exhibit-comparison border rounded-4 p-4 mb-4" aria-labelledby="comparison-title" hidden>
+      <h2 id="comparison-title" class="h3 mb-3">Сравнение экспонатов</h2>
+      <p id="comparison-help" class="text-body-secondary">Отметьте два или три устройства в карточках ниже. Выбор сохраняется при поиске и фильтрации.</p>
+      <p id="comparison-status" role="status" aria-live="polite" aria-atomic="true"></p>
+      <ul id="comparison-selected" class="d-flex flex-wrap gap-2 list-unstyled mb-3" aria-label="Выбранные экспонаты"></ul>
+      <div class="d-flex flex-wrap gap-3">
+        <button id="comparison-show" class="museum-button btn btn-primary" type="button" disabled>Сравнить</button>
+        <button id="comparison-clear" class="btn btn-outline-secondary" type="button" disabled>Очистить выбор</button>
+      </div>
+      <div id="comparison-result" class="mt-4" hidden>
+        <h3 id="comparison-result-title" class="h4 mb-3" tabindex="-1">Характеристики рядом</h3>
+        <p id="comparison-scroll-help" class="small text-body-secondary">На небольшом экране таблицу можно прокручивать по горизонтали.</p>
+        <div class="table-responsive" tabindex="0" role="region" aria-label="Сравнение характеристик экспонатов" aria-describedby="comparison-scroll-help">
+          <table class="comparison-table exhibit-specs table table-striped table-bordered align-middle mb-0">
+            <caption>Общие характеристики типов устройств; возможности конкретных моделей могут отличаться.</caption>
+            <thead id="comparison-head"></thead>
+            <tbody id="comparison-body"></tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <div id="exhibition-empty" class="exhibition-empty border rounded-4 p-4 mb-4" hidden>
+      <h2 class="h4 mb-3">Экспонаты не найдены</h2>
+      <p class="text-body-secondary">Попробуйте другое название или измените выбранные фильтры.</p>
+      <button class="museum-button btn btn-primary" type="reset" form="exhibition-filters">Сбросить фильтры</button>
+    </div>
+
+    <div id="exhibitions-list" class="row g-4">
       <section id="abacus" class="museum-section col-12 col-md-6 col-lg-4" aria-labelledby="abacus-title">
         <article class="exhibit-card card h-100 overflow-hidden">
           <div class="position-relative">
@@ -259,6 +351,10 @@
 
   <a class="museum-button back-to-top btn btn-primary position-fixed bottom-0 end-0 m-3 shadow z-3" href="#top" aria-label="Вернуться к началу страницы">Наверх</a>
 
+  <script src="js/exhibits-data.js" defer></script>
+  <script src="js/exhibitions.js" defer></script>
+  <script src="js/comparison.js" defer></script>
+  <script src="js/animations.js" defer></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

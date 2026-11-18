@@ -1,17 +1,18 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="ru" data-bs-theme="light">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="О ByteMuseum: музей компьютеров, вычислительных устройств и цифровых технологий. Идея коллекции и знакомство с историей вычислений.">
   <title>О музее — ByteMuseum</title>
   <link rel="icon" type="image/svg+xml" href="images/logo.svg">
+  <script src="js/theme.js"></script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="css/custom.css">
 </head>
 <body id="top" class="d-flex flex-column min-vh-100">
   <header class="museum-header sticky-top text-white shadow-sm">
-    <nav class="museum-nav navbar navbar-expand-lg py-3" data-bs-theme="dark" aria-label="Основная навигация">
+    <nav class="museum-nav navbar navbar-expand-xl py-3" data-bs-theme="dark" aria-label="Основная навигация">
       <div class="container">
         <a class="museum-header__brand navbar-brand d-inline-flex align-items-center gap-2 fs-4 mb-0" href="index.html">
           <img class="museum-brand__icon" src="images/logo.svg" width="36" height="36" alt="">
@@ -21,13 +22,16 @@
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="main-menu">
-          <ul class="navbar-nav ms-auto gap-lg-3 pt-3 pt-lg-0">
+          <ul class="navbar-nav ms-auto gap-xl-3 pt-3 pt-xl-0">
             <li class="nav-item"><a class="museum-nav__link nav-link" href="index.html">Главная</a></li>
             <li class="nav-item"><a class="museum-nav__link nav-link" href="exhibitions.html">Экспозиции</a></li>
             <li class="nav-item"><a class="museum-nav__link nav-link" href="about.html" aria-current="page">О музее</a></li>
             <li class="nav-item"><a class="museum-nav__link nav-link" href="visitors.html">Посетителям</a></li>
             <li class="nav-item"><a class="museum-nav__link nav-link" href="tours.html">Запись на экскурсию</a></li>
           </ul>
+          <button id="theme-toggle" class="theme-toggle btn align-items-center justify-content-center ms-xl-3 mt-3 mt-xl-0" type="button" aria-label="Тема: системная. Переключить на тёмную" title="Тема: системная. Переключить на тёмную" hidden>
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><use id="theme-icon" href="images/icons.svg#theme-system"></use></svg>
+          </button>
         </div>
       </div>
     </nav>
@@ -56,7 +60,7 @@
       </div>
     </section>
 
-    <section class="mb-5" aria-labelledby="collection-title">
+    <section class="mb-5" aria-labelledby="collection-title" data-reveal>
       <h2 id="collection-title" class="mb-4">Что объединяет коллекцию</h2>
       <div class="row g-4">
         <div class="col-12 col-md-6 col-lg-4">
@@ -83,7 +87,7 @@
       </div>
     </section>
 
-    <section class="row g-4" aria-labelledby="explore-title">
+    <section class="row g-4" aria-labelledby="explore-title" data-reveal>
       <div class="col-12 col-lg-9">
         <h2 id="explore-title" class="mb-3">Выберите свой маршрут</h2>
         <p class="text-body-secondary mb-4">Начните с экспоната, который вызывает любопытство, или выберите экскурсию по интересующей теме. Подробные описания помогут разобраться в устройстве техники, а истории носителей и компьютеров — увидеть связь между разными эпохами.</p>
@@ -159,6 +163,7 @@
 
   <a class="museum-button back-to-top btn btn-primary position-fixed bottom-0 end-0 m-3 shadow z-3" href="#top" aria-label="Вернуться к началу страницы">Наверх</a>
 
+  <script src="js/animations.js" defer></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
