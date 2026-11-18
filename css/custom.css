@@ -464,6 +464,88 @@ a:focus-visible,
   border: 0;
 }
 
+/* Переход включается только на время смены темы, без анимации первого открытия. */
+@media (prefers-reduced-motion: no-preference) {
+  .theme-transition,
+  .theme-transition *:not(:where(.collapsing, .fade, .modal-dialog)),
+  .theme-transition *::before,
+  .theme-transition *::after {
+    transition: color 280ms ease, background-color 280ms ease,
+      border-color 280ms ease, box-shadow 280ms ease,
+      fill 280ms ease, stroke 280ms ease;
+  }
+
+  .theme-transition .exhibit-card {
+    transition: color 280ms ease, background-color 280ms ease,
+      border-color 280ms ease, box-shadow 280ms ease, transform 200ms ease-out;
+  }
+}
+
+/* Анимации: появление разделов, обратная связь карточек, раскрытие сравнения. */
+.museum-reveal {
+  animation: museum-reveal 550ms ease-out;
+}
+
+@keyframes museum-reveal {
+  from {
+    opacity: 0;
+    transform: translateY(1.25rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.exhibit-card {
+  transition: transform 200ms ease-out, box-shadow 200ms ease-out, border-color 200ms ease-out;
+}
+
+.exhibit-card:focus-within {
+  transform: translateY(-0.375rem);
+  border-color: var(--museum-brand);
+  box-shadow: 0 0.75rem 1.5rem rgba(var(--museum-brand-rgb), 0.16);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .exhibit-card:hover {
+    transform: translateY(-0.375rem);
+    border-color: var(--museum-brand);
+    box-shadow: 0 0.75rem 1.5rem rgba(var(--museum-brand-rgb), 0.16);
+  }
+}
+
+#comparison-result:not([hidden]) {
+  animation: museum-comparison-open 300ms ease-out;
+}
+
+@keyframes museum-comparison-open {
+  from {
+    opacity: 0;
+    clip-path: inset(0 0 100% 0);
+  }
+  to {
+    opacity: 1;
+    clip-path: inset(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .museum-reveal,
+  #comparison-result:not([hidden]) {
+    animation: none;
+  }
+
+  .exhibit-card {
+    transition: none;
+  }
+
+  .exhibit-card:hover,
+  .exhibit-card:focus-within {
+    transform: none;
+  }
+}
+
 /* Горизонтальное меню занимает меньше места по высоте */
 @media (min-width: 992px) {
   :root {
