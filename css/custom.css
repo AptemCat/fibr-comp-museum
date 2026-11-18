@@ -1,27 +1,92 @@
 :root {
-  /* Тема сайта */
+  /* Палитра светлой темы и общие размеры. */
+  color-scheme: light;
   --museum-brand: #2d574b;
   --museum-brand-rgb: 45, 87, 75;
   --museum-brand-hover: #234438;
+  --museum-brand-hover-rgb: 35, 68, 56;
+  --museum-on-brand: #ffffff;
+  --museum-button-bg: #2d574b;
+  --museum-button-hover: #234438;
+  --museum-button-active: #203d35;
   --museum-header: #203d35;
   --museum-accent: #d5b677;
   --museum-focus: #986414;
   --museum-surface: #ffffff;
   --museum-surface-muted: #f0f3ed;
+  --museum-input-border: #75877c;
   --museum-radius: 1rem;
   --museum-anchor-offset: 10rem;
 
-  /* Общие цвета Bootstrap и собственных блоков */
+  /* Переменные Bootstrap: текст, поверхности, ссылки и состояния форм. */
   --bs-primary: var(--museum-brand);
   --bs-primary-rgb: var(--museum-brand-rgb);
+  --bs-primary-text-emphasis: #234438;
+  --bs-primary-bg-subtle: #e5eee7;
+  --bs-primary-border-subtle: #a2b7aa;
   --bs-body-color: #263c35;
+  --bs-body-color-rgb: 38, 60, 53;
   --bs-body-bg: #fbfaf6;
+  --bs-body-bg-rgb: 251, 250, 246;
+  --bs-emphasis-color: #182a23;
+  --bs-emphasis-color-rgb: 24, 42, 35;
   --bs-secondary-color: #59645e;
+  --bs-secondary-color-rgb: 89, 100, 94;
+  --bs-secondary-bg: #e5ebe4;
+  --bs-secondary-bg-rgb: 229, 235, 228;
+  --bs-tertiary-color: #626c66;
+  --bs-tertiary-color-rgb: 98, 108, 102;
+  --bs-tertiary-bg: var(--museum-surface-muted);
+  --bs-tertiary-bg-rgb: 240, 243, 237;
   --bs-border-color: #d5ddd5;
+  --bs-border-color-translucent: rgba(38, 60, 53, 0.25);
   --bs-link-color: var(--museum-brand);
   --bs-link-color-rgb: var(--museum-brand-rgb);
   --bs-link-hover-color: var(--museum-brand-hover);
-  --bs-link-hover-color-rgb: 35, 68, 56;
+  --bs-link-hover-color-rgb: var(--museum-brand-hover-rgb);
+  --bs-form-valid-color: #146c43;
+  --bs-form-valid-border-color: #146c43;
+  --bs-form-invalid-color: #b02a37;
+  --bs-form-invalid-border-color: #b02a37;
+}
+
+:root[data-bs-theme="dark"] {
+  color-scheme: dark;
+  --museum-brand: #9bcbb5;
+  --museum-brand-rgb: 155, 203, 181;
+  --museum-brand-hover: #c1e4d2;
+  --museum-brand-hover-rgb: 193, 228, 210;
+  --museum-on-brand: #142c23;
+  --museum-button-bg: #356653;
+  --museum-button-hover: #407a64;
+  --museum-button-active: #2d574b;
+  --museum-header: #162b24;
+  --museum-focus: #e1c48c;
+  --museum-surface: #202e28;
+  --museum-surface-muted: #26382f;
+  --museum-input-border: #789184;
+  --bs-primary-text-emphasis: #b2ddc7;
+  --bs-primary-bg-subtle: #243c30;
+  --bs-primary-border-subtle: #648b74;
+  --bs-body-color: #e5ede6;
+  --bs-body-color-rgb: 229, 237, 230;
+  --bs-body-bg: #17221c;
+  --bs-body-bg-rgb: 23, 34, 28;
+  --bs-emphasis-color: #f5faf5;
+  --bs-emphasis-color-rgb: 245, 250, 245;
+  --bs-secondary-color: #b4c4b9;
+  --bs-secondary-color-rgb: 180, 196, 185;
+  --bs-secondary-bg: #304338;
+  --bs-secondary-bg-rgb: 48, 67, 56;
+  --bs-tertiary-color: #a6b9ac;
+  --bs-tertiary-color-rgb: 166, 185, 172;
+  --bs-tertiary-bg-rgb: 38, 56, 47;
+  --bs-border-color: #52675a;
+  --bs-border-color-translucent: rgba(229, 237, 230, 0.25);
+  --bs-form-valid-color: #92d7b4;
+  --bs-form-valid-border-color: #92d7b4;
+  --bs-form-invalid-color: #ffa8b1;
+  --bs-form-invalid-border-color: #ffa8b1;
 }
 
 /* Базовое поведение и клавиатурная навигация */
@@ -84,7 +149,7 @@ a:focus-visible,
 
 .social-links__link:hover,
 .social-links__link:focus-visible {
-  color: #ffffff;
+  color: var(--museum-on-brand);
   background-color: var(--museum-brand);
   border-color: var(--museum-brand);
 }
@@ -118,6 +183,38 @@ a:focus-visible,
 .museum-nav .navbar-toggler {
   min-width: 48px;
   min-height: 44px;
+}
+
+.theme-toggle {
+  --bs-btn-color: #ffffff;
+  --bs-btn-border-color: var(--museum-accent);
+  --bs-btn-hover-color: var(--museum-header);
+  --bs-btn-hover-bg: var(--museum-accent);
+  --bs-btn-hover-border-color: var(--museum-accent);
+  --bs-btn-active-color: var(--museum-header);
+  --bs-btn-active-bg: var(--museum-accent);
+  --bs-btn-active-border-color: var(--museum-accent);
+  min-height: 44px;
+  width: 44px;
+  padding: 0;
+}
+
+.theme-toggle:not([hidden]) {
+  display: inline-flex;
+}
+
+.theme-toggle[hidden] {
+  display: none;
+}
+
+.theme-toggle:focus-visible {
+  outline: 3px solid var(--museum-accent);
+  outline-offset: 4px;
+}
+
+.theme-toggle[data-theme-mode="dark"] {
+  color: var(--museum-header);
+  background-color: var(--museum-accent);
 }
 
 /* Главный блок и преимущества */
@@ -178,7 +275,7 @@ a:focus-visible,
   width: 1.6rem;
   height: 1.6rem;
   border-radius: 50%;
-  color: #ffffff;
+  color: var(--museum-on-brand);
   background-color: var(--museum-brand);
   font-size: 0.875rem;
   font-weight: 600;
@@ -224,8 +321,8 @@ a:focus-visible,
 }
 
 .comparison-choice .form-check-input:checked {
-  background-color: var(--museum-brand);
-  border-color: var(--museum-brand);
+  background-color: var(--museum-button-bg);
+  border-color: var(--museum-button-bg);
 }
 
 .exhibit-card {
@@ -246,7 +343,7 @@ a:focus-visible,
 }
 
 .museum-badge {
-  color: #ffffff;
+  color: var(--museum-on-brand);
   background-color: var(--museum-brand);
 }
 
@@ -289,6 +386,26 @@ a:focus-visible,
 }
 
 /* Форма записи и предварительный просмотр заявки */
+.form-control,
+.form-select,
+.form-check-input,
+.input-group-text {
+  border-color: var(--museum-input-border);
+}
+
+.btn-outline-secondary {
+  --bs-btn-color: var(--bs-secondary-color);
+  --bs-btn-border-color: var(--bs-secondary-color);
+  --bs-btn-hover-color: var(--bs-body-bg);
+  --bs-btn-hover-bg: var(--bs-body-color);
+  --bs-btn-hover-border-color: var(--bs-body-color);
+  --bs-btn-active-color: var(--bs-body-bg);
+  --bs-btn-active-bg: var(--bs-body-color);
+  --bs-btn-active-border-color: var(--bs-body-color);
+  --bs-btn-disabled-color: var(--bs-secondary-color);
+  --bs-btn-disabled-border-color: var(--bs-secondary-color);
+}
+
 .tour-note {
   --bs-card-bg: var(--museum-surface-muted);
 }
@@ -304,8 +421,8 @@ a:focus-visible,
 }
 
 .tour-form .form-check-input:checked {
-  background-color: var(--museum-brand);
-  border-color: var(--museum-brand);
+  background-color: var(--museum-button-bg);
+  border-color: var(--museum-button-bg);
 }
 
 .tour-summary dd {
@@ -318,15 +435,19 @@ a:focus-visible,
 
 /* Состояния кнопок через переменные Bootstrap */
 .museum-button {
-  --bs-btn-bg: var(--museum-brand);
-  --bs-btn-border-color: var(--museum-brand);
-  --bs-btn-hover-bg: var(--museum-brand-hover);
-  --bs-btn-hover-border-color: var(--museum-brand-hover);
-  --bs-btn-active-bg: var(--museum-header);
-  --bs-btn-active-border-color: var(--museum-header);
+  --bs-btn-color: #ffffff;
+  --bs-btn-hover-color: #ffffff;
+  --bs-btn-active-color: #ffffff;
+  --bs-btn-disabled-color: #ffffff;
+  --bs-btn-bg: var(--museum-button-bg);
+  --bs-btn-border-color: var(--museum-button-bg);
+  --bs-btn-hover-bg: var(--museum-button-hover);
+  --bs-btn-hover-border-color: var(--museum-button-hover);
+  --bs-btn-active-bg: var(--museum-button-active);
+  --bs-btn-active-border-color: var(--museum-button-active);
   --bs-btn-focus-shadow-rgb: var(--museum-brand-rgb);
-  --bs-btn-disabled-bg: var(--museum-brand);
-  --bs-btn-disabled-border-color: var(--museum-brand);
+  --bs-btn-disabled-bg: var(--museum-button-bg);
+  --bs-btn-disabled-border-color: var(--museum-button-bg);
 }
 
 .back-to-top {

@@ -1,17 +1,18 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="ru" data-bs-theme="light">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Описание, история и характеристики экспоната ByteMuseum.">
   <title>Экспонат — ByteMuseum</title>
   <link rel="icon" type="image/svg+xml" href="images/logo.svg">
+  <script src="js/theme.js"></script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="css/custom.css">
 </head>
 <body id="top" class="d-flex flex-column min-vh-100">
   <header class="museum-header sticky-top text-white shadow-sm">
-    <nav class="museum-nav navbar navbar-expand-lg py-3" data-bs-theme="dark" aria-label="Основная навигация">
+    <nav class="museum-nav navbar navbar-expand-xl py-3" data-bs-theme="dark" aria-label="Основная навигация">
       <div class="container">
         <a class="museum-header__brand navbar-brand d-inline-flex align-items-center gap-2 fs-4 mb-0" href="index.html">
           <img class="museum-brand__icon" src="images/logo.svg" width="36" height="36" alt="">
@@ -21,13 +22,16 @@
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="main-menu">
-          <ul class="navbar-nav ms-auto gap-lg-3 pt-3 pt-lg-0">
+          <ul class="navbar-nav ms-auto gap-xl-3 pt-3 pt-xl-0">
             <li class="nav-item"><a class="museum-nav__link nav-link" href="index.html">Главная</a></li>
             <li class="nav-item"><a class="museum-nav__link nav-link" href="exhibitions.html">Экспозиции</a></li>
             <li class="nav-item"><a class="museum-nav__link nav-link" href="about.html">О музее</a></li>
             <li class="nav-item"><a class="museum-nav__link nav-link" href="visitors.html">Посетителям</a></li>
             <li class="nav-item"><a class="museum-nav__link nav-link" href="tours.html">Запись на экскурсию</a></li>
           </ul>
+          <button id="theme-toggle" class="theme-toggle btn align-items-center justify-content-center ms-xl-3 mt-3 mt-xl-0" type="button" aria-label="Тема: системная. Переключить на тёмную" title="Тема: системная. Переключить на тёмную" hidden>
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><use id="theme-icon" href="images/icons.svg#theme-system"></use></svg>
+          </button>
         </div>
       </div>
     </nav>
